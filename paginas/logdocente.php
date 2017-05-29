@@ -7,44 +7,19 @@ if(isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya es
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
     <title></title>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/png" href="">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 		<meta name="viewport" content="width=device-width" />
 		<link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen"/>
-		<link type="text/css" rel="stylesheet" href="assets/css/styles.css"  media="screen"/>
+		<link rel="stylesheet" href="assets/css/styles_login.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 
   </head>
   <body>
-	<style media="screen">
-	body {
-	background-image: url("assets/img/bg.jpg");
-	background-repeat: no-repeat;
-	background-size: 100%;
-  }
-	
-.contenido_docente {
-	background: rgba(255, 255, 255, 0.7);
-	width: 30%;
-	min-width: 400px;
-	margin: auto;
-	margin-top: 25px;
-	border-radius: 10px;
-	padding-bottom: 10px;
-	padding-top: 10px;
-				}
-
-form {
-  margin-left: 30px;
-  margin-right: 30px;
-}
-		</style>
 
 	<div class="contenido_docente" align="center">
 
