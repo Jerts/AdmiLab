@@ -22,12 +22,28 @@ if(isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya es
 
   </head>
   <body>
-		<style media="screen">
-		body {
+	<style media="screen">
+	body {
 	background-image: url("assets/img/bg.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%;
   }
+	
+.contenido_docente {
+	background: rgba(255, 255, 255, 0.7);
+	width: 30%;
+	min-width: 400px;
+	margin: auto;
+	margin-top: 25px;
+	border-radius: 10px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+				}
+
+form {
+  margin-left: 30px;
+  margin-right: 30px;
+}
 		</style>
 
 	<div class="contenido_docente" align="center">
