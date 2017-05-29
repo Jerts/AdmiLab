@@ -14,14 +14,6 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
   <body>
     <div style="width:70%; margin: 0 auto;">
 
-      <div style="display:inline-block">
-        <ul>
-          <li><a href="index_docente.php">Inicio</a></li>
-          <li><a href="horario_docente.php">Mi horario</a></li>
-          <li><a href="practicas_docente.php">Practicas</a></li>
-        </ul>
-      </div>
-
       <div>
         Pagina principal para Docentes<br>
         <?php
