@@ -21,16 +21,12 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
           $consulta = "SELECT DISTINCT(ID_PRACTICA) FROM material_practica
                        INNER JOIN horario ON material_practica.ID_HORARIO = horario.ID_HORARIO WHERE horario.ID_MAESTRO = '".$_SESSION['user_docente']."'";
           $consulta = mysqli_query($conect, $consulta);
-          echo "<table border='1px'>
-                  <tr>
-                    <td>Practica</td>
-                  </tr>";
+          echo "<div class='collection'>
+                    <li class='collection-header'>Practica</li>";
           while ($result = mysqli_fetch_array($consulta, MYSQLI_BOTH)) {
-            echo "<tr>
-                    <td><a href='verpractica.php?practica=".$result[0]."'>".$result[0]."</a></td>
-                  </tr>";
+            echo "<a class='collection-item' href='verpractica.php?practica=".$result[0]."'>".$result[0]."</a>";
           }
-          echo "</table>";
+          echo "</div>";
         ?>
          <br>
          <a href="crear_practica.php">Añadir una nueva practica</a>
