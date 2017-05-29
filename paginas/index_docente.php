@@ -41,13 +41,13 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
 	               <ul class="nav">
 									 <li>
 										 <a onclick="menuselect(1);" class="waves-effect menubtn waves-light">
-											 <i class="pe-7s-home"></i>
-											 <p>Inicio</p>
+											 <i class="pe-7s-display1"></i>
+											 <p>Panel</p>
 										 </a>
 									 </li>
 
 									 <li>
-										 <a onclick="menuselect(2);" class="waves-effect menubtn waves-light">
+										 <a onclick="menuselect(2);" class="waves-effect menubtn waves-light" style="display:none;">
 											 <i class="pe-7s-clock"></i>
 											 <p>Horario</p>
 										 </a>
@@ -60,20 +60,20 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
 										 </a>
 									 </li>
 
-									 <li>
-										 <a onclick="menuselect(4);" class="waves-effect menubtn waves-light">
+									 <li class="disabled">
+										 <a>
 											 <i class="pe-7s-user" ></i>
 											 <p>Usuario</p>
 										 </a>
 									 </li>
-	                   <li>
+	                   <li style="display:none;">
 	                       <a href="#notifications">
 	                           <i class="pe-7s-bell"></i>
 	                           <p>Notificaciones</p>
 	                       </a>
 	                   </li>
-	           					<li class="active-pro">
-	                       <a href="#config">
+	           					<li class="disabled">
+	                       <a>
 	                           <i class="pe-7s-config"></i>
 	                           <p>Configuración</p>
 	                       </a>
@@ -88,6 +88,30 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
 						<div class="navbar-header">
 							<a class="navbar-brand material-icons large top_icon">insert_chart</a>
 							<a class="navbar-brand" href="#"> Panel</a>
+						</div>
+						<div class="collapse navbar-collapse">
+							<ul class="nav navbar-nav navbar-right">
+								<li>
+									<a href="#" class="dropdown-toggle notif-drop" data-toggle="dropdown">
+										<span>Cuenta</span>
+									</a>
+									<ul class="dropdown-menu">
+										<li><a href="cerrarsesion.php" style="width: 200px !important;">Cerrar sesion</a></li>
+										<li></li>
+										<li></li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li>
+									<a href="#" class="dropdown-toggle notif-drop" data-toggle="dropdown">
+										<i class="pe-7s-bell"></i>
+									</a>
+									<ul class="dropdown-menu" style="width:300px !important;">
+										<li><iframe src="notif.php" class="frame-notif" width="298px" height="300px" frameborder="0" style="margin: auto !important; border-radius: 10px;"></iframe></li>
+									</ul>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</nav>
