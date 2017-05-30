@@ -14,34 +14,61 @@ if(isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya es
 		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 		<meta name="viewport" content="width=device-width" />
 		<link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen"/>
-		<link rel="stylesheet" href="assets/css/styles_login.css">
+		<link rel="stylesheet" href="assets/css/styles_login.css" media="screen">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 
   </head>
   <body>
 
-	<div class="contenido_docente" align="center">
+		<div class="centrar" align="center">
 
-	<form action="Login/login.php" method="post"> <!--Envia por get los valores "usr" y "pass"--> <!--NOTA: Si quieres cambiar el método tienes que borrarlo, guardar y volver a escribir el nuevo método-->
+				<div align="center" id="card">
+					<style media="screen">
+					.card {
+							width: 30%;
+							min-width: 500px;
+							max-height: 550px;
+							padding: 10px;
+							position: absolute;
+							top: 0;
+							bottom: 0;
+							left: 0;
+							right: 0;
+							margin: auto;
+					}
+					</style>
 
-			<div align="center" >
-			<img src="assets/img/1.1.fw.png" class="logo" heigh="250px" width="250px" >
-			</div>
+						<div class="col m6">
+								<div class="card white-1">
+										<div class="card-content">
+												<span class="card-title">Inicio de Sesión</span>
 
-			<h3>Inicio de Sesión</h3>
+												<form action="Login/login.php" method="post">
+														<!--Envia por get los valores "usr" y "pass"-->
+														<!--NOTA: Si quieres cambiar el método tienes que borrarlo, guardar y volver a escribir el nuevo método-->
 
-			<input type="text" name="user_docente" id="input_usuario" placeholder="Usuario" autocomplete="off" required>
-			<input type="password" name="pass_docente" id="input_pass" minlength="6" placeholder="Contraseña" required>
+														<div align="center">
+																<img src="assets/img/1.1.fw.png" class="logo" heigh="200px" width="200px">
+														</div>
 
-			<input  class="waves-effect waves-light btn" type="submit" name="sbmt" id="btn_submit"><br><br>
+														<input type="text" name="user_docente" id="input_usuario" placeholder="Usuario" autocomplete="off" required>
 
-		<div align="center">
-		<a href="Registro/">Registrarse</a>
+														<input type="password" name="pass_docente" id="input_pass" minlength="6" placeholder="Contraseña" required>
+
+														<input class="waves-effect waves-light btn" type="submit" name="sbmt" id="btn_submit"><br><br>
+
+												</form>
+
+										</div>
+										<div class="card-action" align="center">
+												<a href="#"></a>
+												<a href="#">Registrarse</a>
+										</div>
+								</div>
+						</div>
+				</div>
 		</div>
-
-	</form>
-</div>
 
 		<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
