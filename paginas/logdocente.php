@@ -31,7 +31,7 @@ if(isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya es
 
 			<h3>Inicio de Sesión</h3>
 
-			<input type="email" name="user_docente" id="input_usuario" placeholder="Usuario" autocomplete="off" required>
+			<input type="text" name="user_docente" id="input_usuario" placeholder="Usuario" autocomplete="off" required>
 			<input type="password" name="pass_docente" id="input_pass" minlength="6" placeholder="Contraseña" required>
 
 			<input  class="waves-effect waves-light btn" type="submit" name="sbmt" id="btn_submit"><br><br>
