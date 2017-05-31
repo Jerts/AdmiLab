@@ -3,3 +3,34 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
 }
+
+@media screen and (mmax-width: 1100px) {
+    body {
+        background-size: auto;
+    }
+}
+
+#body_admin {
+    background-image: url("../img/bg1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+    #body_admin {
+        background-size: auto;
+    }
+}
+
+#card {
+    width: 30%;
+    min-width: 500px;
+    max-height: 550px;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
