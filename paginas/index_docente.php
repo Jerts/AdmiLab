@@ -17,12 +17,9 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
 		<meta name="viewport" content="width=device-width" />
 		<link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen"/>
 		<link type="text/css" rel="stylesheet" href="assets/css/styles.css"  media="screen"/>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
 		<link href="assets/css/animate.min.css" rel="stylesheet" />
 		<link href="assets/css/light-bootstrap-dashboard.css" rel="stylesheet" />
-		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
 		<link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
 	</head>
@@ -31,9 +28,7 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
 		<div class="wrapper">
 
 			<!-- MENU DOCENTE -->
-			<?php
-			include ("menu_docente.php");
-			 ?>
+			<?php include ("menu_docente.php"); ?>
 
 			<div class="main-panel">
 				<nav class="navbar navbar-default navbar-fixed">
@@ -69,6 +64,7 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
 					</div>
 				</nav>
 
+				<!-- CONTENIDO -->
 				<div class="content">
 					<div class="container-fluid">
 						<div class="row">
@@ -88,28 +84,8 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
 					</div>
 				</div>
 
-
-				<footer class="footer">
-					<div class="container-fluid">
-						<nav class="pull-left">
-							<ul>
-								<li>
-									<a href="#">
-	                    AdmiLab
-	                </a>
-								</li>
-
-							</ul>
-						</nav>
-
-						<p class="copyright pull-right">
-							&copy;
-							<script>
-								document.write(new Date().getFullYear())
-							</script> xdxdxdxdxd
-						</p>
-					</div>
-				</footer>
+				<!-- FOOTER -->
+				<?php include 'footer.php'; ?>
 
 			</div>
 		</div>
