@@ -29,7 +29,7 @@ if(isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya es
 										<div class="card-content">
 												<span class="card-title">Inicio de Sesión</span>
 
-												<form action="Login/login.php" method="post">
+												<form action="../acciones/logdocente_a.php" method="post">
 
 														<div align="center">
 																<img src="assets/img/1.1.fw.png" class="logo" heigh="50%" width="50%">

@@ -34,13 +34,19 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
 				<nav class="navbar navbar-default navbar-fixed">
 					<div class="container-fluid">
 						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+							</button>
 							<a class="navbar-brand material-icons large top_icon">insert_chart</a>
 							<a class="navbar-brand" href="#"> Panel</a>
 						</div>
 						<div class="collapse navbar-collapse">
 							<ul class="nav navbar-nav navbar-right">
 								<li>
-									<a href="#" class="dropdown-toggle notif-drop" data-toggle="dropdown">
+									<a href="#" class="dropdown-toggle notif-drop hidden-xs" data-toggle="dropdown">
 										<span>Cuenta</span>
 									</a>
 									<ul class="dropdown-menu">
@@ -52,7 +58,7 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
 							</ul>
 							<ul class="nav navbar-nav navbar-right">
 								<li>
-									<a href="#" class="dropdown-toggle notif-drop" data-toggle="dropdown">
+									<a href="#" class="dropdown-toggle notif-drop hidden-xs" data-toggle="dropdown">
 										<i class="pe-7s-bell"></i>
 									</a>
 									<ul class="dropdown-menu" style="width:300px !important;">
