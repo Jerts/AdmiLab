@@ -29,7 +29,7 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
             $consulta = "SELECT * FROM laboratorio";
             $consulta = mysqli_query($conect,$consulta);
             while ($result=mysqli_fetch_array($consulta,MYSQLI_BOTH)) {
-              echo "<option value='".$result[0]."'>".$result[2]."</option>";
+              echo "<option value='".$result[0]."'>Laboratorio: ".$result[0]." ".$result[2]."</option>";
             }
             ?>
           </datalist><br>
@@ -40,10 +40,10 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
             <?php
             include '../conexion.php';
             mysqli_query($conect,"SET NAMES 'utf8'");
-            $consulta = "SELECT `ID_MATERIA` FROM materia";
+            $consulta = "SELECT * FROM materia";
             $consulta = mysqli_query($conect,$consulta);
             while ($result=mysqli_fetch_array($consulta,MYSQLI_BOTH)) {
-              echo "<option value='".$result[0]."'>".$result[2]."</option>";
+              echo "<option value='".$result[0]."'>".$result[0]."</option>";
             }
             ?>
           </datalist><br>
@@ -60,10 +60,10 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
 		         </select>
 					</div>
 
-          Hora de entrada (hh:mm:ss)<br>
+          Hora de entrada formato 24 horas(hh:mm)<br>
           <input type="text" name="hora_entrada" class="validate" pattern="^(?:(?:([01]?\d|2[0-3]):)?([0-5]?\d):)?([0-5]?\d)$"><br>
 
-          Hora de salida (hh:mm:ss)<br>
+          Hora de salida formato 24 horas(hh:mm)<br>
           <input type="text" name="hora_salida" class="validate" pattern="^(?:(?:([01]?\d|2[0-3]):)?([0-5]?\d):)?([0-5]?\d)$"><br>
           <input type="submit" class="btn waves-effect waves-light" value="Enviar">
 
