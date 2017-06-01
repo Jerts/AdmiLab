@@ -61,10 +61,10 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
 					</div>
 
           Hora de entrada (hh:mm:ss)<br>
-          <input type="text" name="hora_entrada" class="validate"><br>
+          <input type="text" name="hora_entrada" class="validate" pattern="^(?:(?:([01]?\d|2[0-3]):)?([0-5]?\d):)?([0-5]?\d)$"><br>
 
           Hora de salida (hh:mm:ss)<br>
-          <input type="text" name="hora_salida" class="validate"><br>
+          <input type="text" name="hora_salida" class="validate" pattern="^(?:(?:([01]?\d|2[0-3]):)?([0-5]?\d):)?([0-5]?\d)$"><br>
           <input type="submit" class="btn waves-effect waves-light" value="Enviar">
 
         </form>

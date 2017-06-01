@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-05-2017 a las 00:28:04
+-- Tiempo de generación: 01-06-2017 a las 22:16:57
 -- Versión del servidor: 10.1.21-MariaDB
--- Versión de PHP: 7.1.1
+-- Versión de PHP: 7.0.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `administrador` (
   `USUARIO` varchar(50) NOT NULL,
-  `CONTRASEÑA` varchar(50) NOT NULL,
+  `CONTRA` varchar(50) NOT NULL,
   `OBSERVACIONES` mediumtext
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -36,7 +36,7 @@ CREATE TABLE `administrador` (
 -- Volcado de datos para la tabla `administrador`
 --
 
-INSERT INTO `administrador` (`USUARIO`, `CONTRASEÑA`, `OBSERVACIONES`) VALUES
+INSERT INTO `administrador` (`USUARIO`, `CONTRA`, `OBSERVACIONES`) VALUES
 ('akenfo', 'b60e56cf374338f1169639c5e921bf9e411a13c3', ''),
 ('bestia666', 'b60e56cf374338f1169639c5e921bf9e411a13c3', 'Es Genesis'),
 ('bobesponja', 'b60e56cf374338f1169639c5e921bf9e411a13c3', ''),
@@ -89,7 +89,9 @@ INSERT INTO `horario` (`ID_HORARIO`, `ID_MAESTRO`, `ID_LABORATORIO`, `ID_MATERIA
 (12, 'MARIA', 6, 'BIOLOGÍA3', 'MIERCOLES', '10:00:00', '12:00:00', NULL),
 (13, 'NATALIA', 3, 'BIOLOGÍA4', 'JUEVES', '07:00:00', '08:00:00', NULL),
 (14, 'GÉNESIS', 6, 'BIOLOGÍA4', 'VIERNES', '07:00:00', '08:00:00', NULL),
-(15, 'RODRIGO', 14, 'QUÍMICA4', 'VIERNES', '10:00:00', '12:00:00', NULL);
+(15, 'RODRIGO', 14, 'QUÍMICA4', 'VIERNES', '10:00:00', '12:00:00', NULL),
+(16, 'JOSE', 8, 'ANATOMÍA4', 'JUEVES', '13:02:00', '23:00:00', NULL),
+(17, 'JOSE', 1, 'BIOLOGÍA1', 'VIERNES', '02:04:00', '03:13:00', NULL);
 
 -- --------------------------------------------------------
 
@@ -132,7 +134,7 @@ INSERT INTO `laboratorio` (`ID_LABORATORIO`, `NOMBRE`, `OBSERVACIONES`) VALUES
 
 CREATE TABLE `maestro` (
   `ID_MAESTRO` varchar(50) NOT NULL,
-  `CONTRASEÑA` varchar(40) NOT NULL,
+  `CONTRA` varchar(40) NOT NULL,
   `NOMBRE(S)` varchar(50) NOT NULL,
   `P_APELLIDO` varchar(50) NOT NULL,
   `S_APELLIDO` varchar(50) NOT NULL,
@@ -143,7 +145,7 @@ CREATE TABLE `maestro` (
 -- Volcado de datos para la tabla `maestro`
 --
 
-INSERT INTO `maestro` (`ID_MAESTRO`, `CONTRASEÑA`, `NOMBRE(S)`, `P_APELLIDO`, `S_APELLIDO`, `OBSERVACIONES`) VALUES
+INSERT INTO `maestro` (`ID_MAESTRO`, `CONTRA`, `NOMBRE(S)`, `P_APELLIDO`, `S_APELLIDO`, `OBSERVACIONES`) VALUES
 ('AMLO', 'holis123', 'ANDRES MANUEL', 'LOPEZ', 'OBRADOR', 'PEJELAGARTOO'),
 ('CHINYI', 'holis123', 'SHINJI', 'IKARI', 'MARIK', 'GET IN THE ROBOT!'),
 ('CHUY', 'holis123', 'JESUS', 'REYES', 'MENDOZA', 'MAESTRO NUEVO'),
@@ -374,7 +376,7 @@ ALTER TABLE `tecnico`
 -- AUTO_INCREMENT de la tabla `horario`
 --
 ALTER TABLE `horario`
-  MODIFY `ID_HORARIO` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `ID_HORARIO` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT de la tabla `laboratorio`
 --
