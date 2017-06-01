@@ -1,4 +1,5 @@
 <?php
+session_start();
 $target_dir = "assets/img/";
 $target_file = $target_dir . $_SESSION['user_docente'];
 $uploadOk = 1;

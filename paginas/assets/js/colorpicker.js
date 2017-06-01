@@ -1,3 +1,4 @@
+var newCookie;
 var str="";
 function pick(num){
   switch (num) {
@@ -14,29 +15,65 @@ function pick(num){
       str="purple";
       break;
     case 4:
-      str="yellow";
-      break;
-    case 5:
-      str="cyan";
-      break;
-    case 6:
-      str="black";
-      break;
-    case 7:
       str="grey";
       break;
-    case 8:
-      str="white";
-      break;
   }
-  $("#colorpick-view").attr("class",str+" z-depth-1");
+  $(".flecha-campo").css("background-image","");
+  $(".flecha-campo").css("background-size", "30px 30px");
+  $("#bs"+num).css("background-image", "url(http://gcmhp.com/ar/images/top.png)");
 }
+
+$("#b0").mouseenter(function() {
+  var parentw = window.parent.document.getElementById("menulat");
+  parentw.setAttribute("data-color","blue");
+}).mouseleave(function() {
+  var parentw = window.parent.document.getElementById("menulat");
+  parentw.setAttribute("data-color",newCookie);
+});
+
+$("#b1").mouseenter(function() {
+  var parentw = window.parent.document.getElementById("menulat");
+  parentw.setAttribute("data-color","red");
+}).mouseleave(function() {
+  var parentw = window.parent.document.getElementById("menulat");
+  parentw.setAttribute("data-color",newCookie);
+});
+
+$("#b2").mouseenter(function() {
+  var parentw = window.parent.document.getElementById("menulat");
+  parentw.setAttribute("data-color","green");
+}).mouseleave(function() {
+  var parentw = window.parent.document.getElementById("menulat");
+  parentw.setAttribute("data-color",newCookie);
+});
+
+$("#b3").mouseenter(function() {
+  var parentw = window.parent.document.getElementById("menulat");
+  parentw.setAttribute("data-color","purple");
+}).mouseleave(function() {
+  var parentw = window.parent.document.getElementById("menulat");
+  parentw.setAttribute("data-color",newCookie);
+});
+
+$("#b4").mouseenter(function() {
+  var parentw = window.parent.document.getElementById("menulat");
+  parentw.setAttribute("data-color","grey");
+}).mouseleave(function() {
+  var parentw = window.parent.document.getElementById("menulat");
+  parentw.setAttribute("data-color",newCookie);
+});
 
 function sendConf(){
   var con = new config();
+  var parentw = window.parent.document.getElementById("menulat");
+  parentw.setAttribute("data-color",str);
+  newCookie = str;
   con.color_change(str);
   $(".verification").css("display","inherit");
-  $(".fileimg").submit();
+}
+
+function nCookie(name){
+  newCookie = name;
 }
 
 function getCookie(name) {

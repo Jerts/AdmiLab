@@ -8,7 +8,7 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
 <!doctype html>
 <html lang="es">
 	<head>
-		<title>Index Docente</title>
+		<title>Panel | AdmiLab</title>
 
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/png" href="">
@@ -109,11 +109,16 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
 		<script type="text/javascript" src="assets/js/materialize.min.js"></script>
 		<script type="text/javascript">
 			var bgcolor = getCookie("sb_color");
+			nCookie(bgcolor);
 
 			if(!bgcolor){
 				var conf = new config();
 			}else{
 				$("#menulat").attr("data-color", bgcolor);
+			}
+
+			function changecolor(color){
+				$("#menulat").attr("data-color", color);
 			}
 
 		</script>

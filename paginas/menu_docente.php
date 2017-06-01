@@ -1,4 +1,4 @@
-<div class="sidebar" id="menulat" data-color="blue" data-image="assets/img/sidebar-6.1.jpg">
+<div class="sidebar" id="menulat" data-color="" data-image="assets/img/sidebar-6.1.jpg">
 
      <div class="sidebar-wrapper">
            <div class="logo">

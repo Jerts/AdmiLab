@@ -49,14 +49,13 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
           </datalist><br>
 
           Día<br>
-					<input list="ldia" name="dia" class="validate">
-          <datalist id="ldia">
+					<select name="dia" class="validate browser-default">
 	            <option value="LUNES">Lunes</option>
 	            <option value="MARTES">Martes</option>
 	            <option value="MIERCOLES">Miercoles</option>
 	            <option value="JUEVES">Jueves</option>
 	            <option value="VIERNES">Viernes</option>
-	          </datalist>
+	         </select>
 
           Hora de entrada (hh:mm:ss)<br>
           <input type="text" name="hora_entrada" class="validate"><br>
@@ -69,7 +68,10 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
       </div>
 		</div>
     </div>
-		<script type="text/javascript" src="assets/js/materialize.min.js"></script>
 		<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+		<script type="text/javascript" src="assets/js/materialize.min.js"></script>
+		<script type="text/javascript">
+
+		</script>
   </body>
 </html>

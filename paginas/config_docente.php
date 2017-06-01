@@ -12,9 +12,9 @@
   </head>
   <body>
     <div class="card" style="width:90%;margin: 0 auto;">
-      <div class="verification green accent-3 card">
+      <div class="verification green accent-3 card" style="display:none">
         <div class="card-content">
-          Se ha guardado su configuracion, por favor recargue la pagina.
+          Se ha guardado su configuracion.
         </div>
       </div>
       <div class="card-content">
@@ -36,35 +36,34 @@
         </div>
         <div class="divider"></div>
         <div class="section">
-          <font size="5">Color del menu</font> <span class="blue z-depth-1" id="colorpick-view">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-          <table style="width:150px; height:150px;" class="z-depth-1">
+          <font size="5">Color del menu</font>
+          <table style="width:150px; height:15px !important;" class="z-depth-1 color-table">
             <tr>
-              <td class="hoverable blue" onclick="pick(0)"></td>
-              <td class="hoverable red" onclick="pick(1)"></td>
-              <td class="hoverable green" onclick="pick(2)"></td>
+              <td id="b0" class="hoverable blue" onclick="pick(0)"></td>
+              <td id="b1" class="hoverable red" onclick="pick(1)"></td>
+              <td id="b2" class="hoverable green" onclick="pick(2)"></td>
+              <td id="b3" class="hoverable purple" onclick="pick(3)"></td>
+              <td id="b4" class="hoverable grey" onclick="pick(4)"></td>
             </tr>
             <tr>
-              <td class="hoverable purple" onclick="pick(3)"></td>
-              <td class="hoverable yellow" onclick="pick(4)"></td>
-              <td class="hoverable cyan" onclick="pick(5)"></td>
-            </tr>
-            <tr>
-              <td class="hoverable black" onclick="pick(6)"></td>
-              <td class="hoverable grey" onclick="pick(7)"></td>
-              <td class="hoverable white" onclick="pick(8)"></td>
+              <td id="bs0" class="flecha-campo"></td>
+              <td id="bs1" class="flecha-campo"></td>
+              <td id="bs2" class="flecha-campo"></td>
+              <td id="bs3" class="flecha-campo"></td>
+              <td id="bs4" class="flecha-campo"></td>
             </tr>
           </table>
-          <input type="hidden" name="color" value="">
         </div>
         <a onclick="sendConf()" class="btn waves-effect waves-ligth blue">Guardar</a>
       </div>
     </div>
+		<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
     <script type="text/javascript" src="assets/js/materialize.min.js"></script>
     <script src="assets/js/config.class.js"></script>
     <script type="text/javascript" src="assets/js/colorpicker.js"></script>
-		<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
     <script type="text/javascript">
       $("#colorpick-view").attr("class",getCookie("sb_color")+" z-depth-1");
+      nCookie(getCookie("sb_color"));
       $(".verification").css("display","none");
     </script>
   </body>
