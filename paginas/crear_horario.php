@@ -49,13 +49,16 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
           </datalist><br>
 
           Día<br>
-					<select name="dia" class="validate browser-default">
-	            <option value="LUNES">Lunes</option>
-	            <option value="MARTES">Martes</option>
-	            <option value="MIERCOLES">Miercoles</option>
-	            <option value="JUEVES">Jueves</option>
-	            <option value="VIERNES">Viernes</option>
-	         </select>
+					<div class="input-field">
+						<select name="dia" class="validate">
+								<option value="" disabled selected>Seleccione un dia</option>
+		            <option value="LUNES">Lunes</option>
+		            <option value="MARTES">Martes</option>
+		            <option value="MIERCOLES">Miercoles</option>
+		            <option value="JUEVES">Jueves</option>
+		            <option value="VIERNES">Viernes</option>
+		         </select>
+					</div>
 
           Hora de entrada (hh:mm:ss)<br>
           <input type="text" name="hora_entrada" class="validate"><br>
@@ -71,7 +74,9 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
 		<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
 		<script type="text/javascript" src="assets/js/materialize.min.js"></script>
 		<script type="text/javascript">
-
+		$(document).ready(function() {
+			$('select').material_select();
+		});
 		</script>
   </body>
 </html>
