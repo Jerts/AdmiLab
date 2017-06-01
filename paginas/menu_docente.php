@@ -1,4 +1,4 @@
-<div class="sidebar" data-color="blue" data-image="assets/img/sidebar-6.1.jpg">
+<div class="sidebar" id="menulat" data-color="blue" data-image="assets/img/sidebar-6.1.jpg">
 
      <div class="sidebar-wrapper">
            <div class="logo">
@@ -35,18 +35,18 @@
                  <p>Usuario</p>
                </a>
              </li>
-               <li style="display:none;">
-                   <a href="#notifications">
-                       <i class="pe-7s-bell"></i>
-                       <p>Notificaciones</p>
-                   </a>
-               </li>
-                <li class=>
-                   <a>
-                       <i class="pe-7s-config"></i>
-                       <p>Configuración</p>
-                   </a>
-               </li>
+             <li style="display:none;">
+               <a>
+                 <i class="pe-7s-bell"></i>
+                 <p>Notificaciones</p>
+               </a>
+             </li>
+             <li>
+               <a onclick="menuselect(6);" class="waves-effect menubtn waves-light">
+                 <i class="pe-7s-config"></i>
+                 <p>Configuración</p>
+               </a>
+             </li>
            </ul>
      </div>
    </div>

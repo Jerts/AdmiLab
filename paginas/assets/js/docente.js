@@ -39,5 +39,17 @@ function menuselect(select){
       $("title").text("Usuario | AdmiLab");
       $(".top_icon").text("assignment_ind");
       break;
+    case 5:
+      $(".framei").attr("src","usuario.php");
+      $(".navbar-brand").text("Usuario");
+      $("title").text("Usuario | AdmiLab");
+      $(".top_icon").text("assignment_ind");
+      break;
+    case 6:
+      $(".framei").attr("src","config_docente.php");
+      $(".navbar-brand").text("Configuracion");
+      $("title").text("Configuracion | AdmiLab");
+      $(".top_icon").text("settings");
+      break;
   }
 }

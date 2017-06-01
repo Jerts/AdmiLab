@@ -4,6 +4,7 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
 	header("Location: logdocente.php"); /*Regresa al usuario logueado al menu*/
 }
 ?>
+
 <!doctype html>
 <html lang="es">
 	<head>
@@ -95,15 +96,26 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
 
 			</div>
 		</div>
-
 		<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
 		<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 		<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>
 		<script src="assets/js/chartist.min.js"></script>
 		<script src="assets/js/bootstrap-notify.js"></script>
-		<script src="assets/js/mijs.js"></script>
+		<script src="assets/js/docente.js"></script>
+		<script src="assets/js/config.class.js"></script>
+		<script type="text/javascript" src="assets/js/colorpicker.js"></script>
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 		<script src="assets/js/light-bootstrap-dashboard.js"></script>
 		<script type="text/javascript" src="assets/js/materialize.min.js"></script>
+		<script type="text/javascript">
+			var bgcolor = getCookie("sb_color");
+
+			if(!bgcolor){
+				var conf = new config();
+			}else{
+				$("#menulat").attr("data-color", bgcolor);
+			}
+
+		</script>
 	</body>
 </html>
