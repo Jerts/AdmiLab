@@ -9,7 +9,7 @@
 
            <ul class="nav">
              <li>
-               <a onclick="menuselect(1);" class="waves-effect menubtn waves-light">
+               <a onclick="menuselect(1);" class="waves-effect waves-light menubtn">
                  <i class="pe-7s-display1"></i>
                  <p>Panel</p>
                </a>

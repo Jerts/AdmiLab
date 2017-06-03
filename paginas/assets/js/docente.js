@@ -13,6 +13,10 @@ $(".notif-drop").click(function() {
   $(".frame-notif").attr('src', $('.frame-notif').attr('src'));
 });
 
+function framesize(obj) {
+  obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+}
+
 function menuselect(select){
   switch (select) {
     case 1:

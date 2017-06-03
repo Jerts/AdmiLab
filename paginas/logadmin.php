@@ -54,8 +54,7 @@ if(isset($_SESSION['user_admin'])){      /*Permite revisar si el usuario ya esta
 		</div>
 
 		<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
-		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-		<script src="assets/js/light-bootstrap-dashboard.js"></script>
 		<script type="text/javascript" src="assets/js/materialize.min.js"></script>
+		<script src="assets/js/light-bootstrap-dashboard.js"></script>
   </body>
 </html>

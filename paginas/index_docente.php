@@ -1,8 +1,18 @@
 <?php
+header("Cache-Control: no-cache, must-revalidate");
+header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
 session_start();
 if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya estaba logeado*/
 	header("Location: logdocente.php"); /*Regresa al usuario logueado al menu*/
 }
+$docente = $_SESSION['user_docente'];
+
+include '../conexion.php'; //$conect
+mysqli_query($conect,"SET NAMES 'utf8'");
+$consulta = "SELECT CONCAT_WS(' ', `NOMBRE(S)`,`P_APELLIDO`) FROM `maestro` WHERE ID_MAESTRO = '{$_SESSION['user_docente']}'";
+$consulta = mysqli_query($conect, $consulta);
+$nombre = mysqli_fetch_array($consulta, MYSQLI_BOTH);
+mysqli_close($conect);
 ?>
 
 <!doctype html>
@@ -15,8 +25,6 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-		<meta name="viewport" content="width=device-width" />
-		<link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen"/>
 		<link type="text/css" rel="stylesheet" href="assets/css/styles.css"  media="screen"/>
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
 		<link href="assets/css/animate.min.css" rel="stylesheet" />
@@ -47,8 +55,8 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
 						<div class="collapse navbar-collapse">
 							<ul class="nav navbar-nav navbar-right">
 								<li>
-									<a href="#" class="dropdown-toggle notif-drop hidden-xs" data-toggle="dropdown">
-										<span>Cuenta</span>
+									<a style="margin-bottom:0px;margin-top:5px" href="#" class="dropdown-toggle notif-drop hidden-xs" data-toggle="dropdown">
+										<img src="assets/img/faces/face-4.jpg" class="img-circle" alt="profile" width="35px">&nbsp;&nbsp;&nbsp;&nbsp;<span><?php echo $nombre[0]; ?></span>
 									</a>
 									<ul class="dropdown-menu">
 										<li><a href="cerrarsesion.php" style="width: 200px !important;">Cerrar sesion</a></li>
@@ -60,10 +68,10 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
 							<ul class="nav navbar-nav navbar-right">
 								<li>
 									<a href="#" class="dropdown-toggle notif-drop hidden-xs" data-toggle="dropdown">
-										<i class="pe-7s-bell"></i>
+										<i class="pe-7s-bell" style="font-size: 20px;"></i>
 									</a>
-									<ul class="dropdown-menu" style="width:300px !important;">
-										<li><iframe src="notif.php" class="frame-notif" width="298px" height="300px" frameborder="0" style="margin: auto !important; border-radius: 10px;"></iframe></li>
+									<ul class="dropdown-menu" style="width:300px !important; padding:0px; height: 300px !important;">
+										<li><iframe src="notif.php" class="frame-notif" width="298px" height="298px" frameborder="0" style="margin: auto !important; border-radius: 10px;"></iframe></li>
 									</ul>
 								</li>
 							</ul>
@@ -86,7 +94,7 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
 							      </div>
 							    </div>
 							  </div>
-							<iframe class="framei" src="" width="100%" height="800px" frameborder="0"></iframe>
+							<iframe class="framei" scrolling="no" src="" width="100%" onload="framesize(this)" frameborder="0"></iframe>
 						</div>
 					</div>
 				</div>
@@ -97,22 +105,30 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
 			</div>
 		</div>
 		<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+		<script src="assets/js/docente.js"></script>
 		<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 		<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>
 		<script src="assets/js/chartist.min.js"></script>
 		<script src="assets/js/bootstrap-notify.js"></script>
-		<script src="assets/js/docente.js"></script>
 		<script src="assets/js/config.class.js"></script>
-		<script type="text/javascript" src="assets/js/colorpicker.js"></script>
-		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 		<script src="assets/js/light-bootstrap-dashboard.js"></script>
-		<script type="text/javascript" src="assets/js/materialize.min.js"></script>
 		<script type="text/javascript">
-			var bgcolor = getCookie("sb_color");
-			nCookie(bgcolor);
+			<?php
+				if (file_exists("assets/img/".$docente.".jpg")) {
+					echo '$("#menulat").attr("data-image", "'."assets/img/".$docente.".jpg".'");';
+				}else if (file_exists("assets/img/".$docente.".jpeg")) {
+					echo '$("#menulat").attr("data-image", "'."assets/img/".$docente.".jpeg".'");';
+				}else if (file_exists("assets/img/".$docente.".png")) {
+					echo '$("#menulat").attr("data-image", "'."assets/img/".$docente.".png".'");';
+				}else if (file_exists("assets/img/".$docente.".gif")) {
+					echo '$("#menulat").attr("data-image", "'."assets/img/".$docente.".gif".'");';
+				}
+			?>
+			var conf = new config();
+			var bgcolor = conf.getCookie("sb_color");
 
 			if(!bgcolor){
-				var conf = new config();
+				document.cookie = 'sb_color=blue';
 			}else{
 				$("#menulat").attr("data-color", bgcolor);
 			}

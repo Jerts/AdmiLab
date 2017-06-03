@@ -14,14 +14,14 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
   </head>
-  <body>
+  <body style="padding-bottom:200px">
     <div style="width:90%; margin: 0 auto;">
       <div class="card">
 				<div class="card-content">
 					<span class="card-title">Añadir un horario</span>
         <form class="" action="../acciones/crear_horario_a.php" method="post">
           Laboratorio:<br>
-          <input list="labs" name="id_laboratorio" class="validate">
+          <input list="labs" name="id_laboratorio" class="validate" required>
           <datalist id="labs">
             <?php
             include '../conexion.php';
@@ -35,7 +35,7 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
           </datalist><br>
 
           Materia:<br>
-          <input list="materia" name="id_materia" class="validate">
+          <input list="materia" name="id_materia" class="validate" required>
           <datalist id="materia">
             <?php
             include '../conexion.php';
@@ -50,7 +50,7 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
 
           Día<br>
 					<div class="input-field">
-						<select name="dia" class="validate">
+						<select name="dia" class="validate" required>
 								<option value="" disabled selected>Seleccione un dia</option>
 		            <option value="LUNES">Lunes</option>
 		            <option value="MARTES">Martes</option>
@@ -61,10 +61,10 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
 					</div>
 
           Hora de entrada formato 24 horas(hh:mm)<br>
-          <input type="text" name="hora_entrada" class="validate" pattern="^(?:(?:([01]?\d|2[0-3]):)?([0-5]?\d):)?([0-5]?\d)$"><br>
+          <input type="text" name="hora_entrada" class="validate" pattern="^(?:(?:([01]?\d|2[0-3]):)?([0-5]?\d):)?([0-5]?\d)$" required><br>
 
           Hora de salida formato 24 horas(hh:mm)<br>
-          <input type="text" name="hora_salida" class="validate" pattern="^(?:(?:([01]?\d|2[0-3]):)?([0-5]?\d):)?([0-5]?\d)$"><br>
+          <input type="text" name="hora_salida" class="validate" pattern="^(?:(?:([01]?\d|2[0-3]):)?([0-5]?\d):)?([0-5]?\d)$" required><br>
           <input type="submit" class="btn waves-effect waves-light" value="Enviar">
 
         </form>

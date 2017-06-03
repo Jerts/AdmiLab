@@ -1,19 +1,34 @@
 class config {
   constructor() {
-    this.sb_bg = "sidebar-6.1.jpg";
-    this.sb_color = "blue";
-
-    document.cookie = 'sb_bg =  sidebar-6.1.jpg';
-    document.cookie = 'sb_color = blue';
-  }
-
-  bg_change(bg){
-    this.sb_bg = bg;
-    document.cookie = 'sb_bg = '+bg;
+    var parentw = window.parent.document.getElementById("menulat");
+    var image = parentw.getAttribute("data-image");
+    $(".actualimg").css("background","url("+image+")");
+    $(".actualimg").css("background-size", "150px 150px");
   }
 
   color_change(color){
     this.sb_color = color;
-    document.cookie = 'sb_color = '+color;
+    document.cookie = 'sb_color='+color;
+  }
+
+  getCookie(cname) {
+      var name = cname + "=";
+      var decodedCookie = decodeURIComponent(document.cookie);
+      var ca = decodedCookie.split(';');
+      for(var i = 0; i <ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+          }
+      }
+      return "";
+  }
+
+  sendConf(){
+    $(".verification").css("display","inherit");
+    $(".fileimg").submit();
   }
 }
