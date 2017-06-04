@@ -2,8 +2,7 @@ class config {
   constructor() {
     var parentw = window.parent.document.getElementById("menulat");
     var image = parentw.getAttribute("data-image");
-    $(".actualimg").css("background","url("+image+")");
-    $(".actualimg").css("background-size", "150px 150px");
+    $(".actualimg").attr("src",image);
   }
 
   color_change(color){

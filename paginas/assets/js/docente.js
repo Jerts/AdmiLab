@@ -44,10 +44,10 @@ function menuselect(select){
       $(".top_icon").text("assignment_ind");
       break;
     case 5:
-      $(".framei").attr("src","usuario.php");
-      $(".navbar-brand").text("Usuario");
-      $("title").text("Usuario | AdmiLab");
-      $(".top_icon").text("assignment_ind");
+      $(".framei").attr("src","confcuenta_docente.php");
+      $(".navbar-brand").text("Configuracion de la cuenta");
+      $("title").text("Configuracion de la cuenta | AdmiLab");
+      $(".top_icon").text("perm_identity");
       break;
     case 6:
       $(".framei").attr("src","config_docente.php");

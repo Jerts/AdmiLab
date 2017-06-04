@@ -35,30 +35,18 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
 				}
       ?>
       <div class="card-content">
-        <form action="upload.php" class="fileimg" method="post" enctype="multipart/form-data">
-          <span class="card-title">Configuracion</span>
+        <form action="uploadcuenta.php" class="formcuenta" method="post" enctype="multipart/form-data">
+          <span class="card-title">Configuracion de la cuenta</span>
           <div class="divider"></div>
           <div class="section">
-            <font size="5">Fondo de menu</font><br>
+            <font size="5">Imagen de perfil</font><br>
             <img class="actualimg" style="max-width:200px; max-height:200px !important; ">
-            <br><input type="file" name="imgbg">
+            <br><input type="file" name="imgperfil">
           </div>
           <div class="divider"></div>
           <div class="section">
-            <font size="5">Color del menu</font>
-            <div class="input-field col s12 m6">
-              <select class="icons" name="color">
-                <option value="" disabled selected>Selecciona un color</option>
-                <option value="blue" data-icon="assets/img/transp.png" class="circle blue">Azul</option>
-                <option value="red" data-icon="assets/img/transp.png" class="circle red">Rojo</option>
-                <option value="green" data-icon="assets/img/transp.png" class="circle green">Verde</option>
-								<option value="orange" data-icon="assets/img/transp.png" class="circle orange">Naranja</option>
-                <option value="purple" data-icon="assets/img/transp.png" class="circle purple">Morado</option>
-                <option value="grey" data-icon="assets/img/transp.png" class="circle grey">Gris</option>
-              </select>
-            </div>
           </div>
-          <a onclick="conf.sendConf();" class="btn waves-effect waves-ligth blue" >Guardar</a>
+          <a onclick="$('.formcuenta').submit();" class="btn waves-effect waves-ligth blue" >Guardar</a>
         </form>
       </div>
     </div>
@@ -66,7 +54,9 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
     <script type="text/javascript" src="assets/js/materialize.min.js"></script>
     <script src="assets/js/config.class.js"></script>
     <script type="text/javascript">
-			var conf = new config();
+      var parentele = window.parent.document.getElementById('img-perfil');
+      var image = parentele.style.background.split("\"")[1];
+      $(".actualimg").attr("src",image);
       $(document).ready(function() {
   			$('select').material_select();
   		});

@@ -55,13 +55,12 @@ mysqli_close($conect);
 						<div class="collapse navbar-collapse">
 							<ul class="nav navbar-nav navbar-right">
 								<li>
-									<a style="margin-bottom:0px;margin-top:5px" href="#" class="dropdown-toggle notif-drop hidden-xs" data-toggle="dropdown">
-										<img src="assets/img/faces/face-4.jpg" class="img-circle" alt="profile" width="35px">&nbsp;&nbsp;&nbsp;&nbsp;<span><?php echo $nombre[0]; ?></span>
+									<a style="margin-bottom:0px;margin-top:0px" href="#" class="dropdown-toggle notif-drop hidden-xs" data-toggle="dropdown">
+										<span style="background: url('assets/img/faces/face-0.jpg'); width:35px !important; height: 35px !important; background-size: auto 35px; background-position: center;display:inline-block" class="img-circle" id="img-perfil"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span style="vertical-align:50%;"><?php echo $nombre[0]; ?></span>
 									</a>
 									<ul class="dropdown-menu">
+										<li><a href="#" onclick="menuselect(5)" style="width: 200px !important;">Configuracion de la cuenta</a></li>
 										<li><a href="cerrarsesion.php" style="width: 200px !important;">Cerrar sesion</a></li>
-										<li></li>
-										<li></li>
 									</ul>
 								</li>
 							</ul>
@@ -78,7 +77,6 @@ mysqli_close($conect);
 						</div>
 					</div>
 				</nav>
-
 				<!-- CONTENIDO -->
 				<div class="content">
 					<div class="container-fluid">
@@ -124,14 +122,37 @@ mysqli_close($conect);
 					echo '$("#menulat").attr("data-image", "'."assets/img/".$docente.".gif".'");';
 				}
 			?>
-			var conf = new config();
-			var bgcolor = conf.getCookie("sb_color");
 
-			if(!bgcolor){
-				document.cookie = 'sb_color=blue';
-			}else{
-				$("#menulat").attr("data-color", bgcolor);
-			}
+			<?php
+				if (file_exists("assets/img/faces/".$docente.".jpg")) {
+					echo '$("#img-perfil").css("background", "url(assets/img/faces/'.$docente.'.jpg");';
+				}else if (file_exists("assets/img/faces/".$docente.".jpeg")) {
+					echo '$("#img-perfil").css("background", "url(assets/img/faces/'.$docente.'.jpeg");';
+				}else if (file_exists("assets/img/faces/".$docente.".png")) {
+					echo '$("#img-perfil").css("background", "url(assets/img/faces/'.$docente.'.png");';
+				}else if (file_exists("assets/img/faces/".$docente.".gif")) {
+					echo '$("#img-perfil").css("background", "url(assets/img/faces/'.$docente.'.gif");';
+				}
+			?>
+			$("#img-perfil").css("background-size", "auto 35px");
+			$("#img-perfil").css("background-position", "center");
+			$("#img-perfil").css("background-repeat", "no-repeat");
+
+			$(window).load(function(){
+				$(".collapse.navbar-collapse.has-image").css("background-repeat","no-repeat");
+				$(".collapse.navbar-collapse.has-image").css("background-size","auto 100%");
+				$(".collapse.navbar-collapse.has-image").css("background-position","center");
+			});
+
+			$(document).ready(function(){
+				var conf = new config();
+				var bgcolor = conf.getCookie("sb_color");
+				if(!bgcolor){
+					document.cookie = 'sb_color=blue';
+				}else{
+					$("#menulat").attr("data-color", bgcolor);
+				}
+			});
 
 			function changecolor(color){
 				$("#menulat").attr("data-color", color);
