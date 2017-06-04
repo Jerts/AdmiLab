@@ -40,8 +40,8 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
           <div class="divider"></div>
           <div class="section">
             <font size="5">Fondo de menu</font><br>
-            <img class="actualimg" style="max-width:200px; max-height:200px !important; ">
-            <br><input type="file" name="imgbg">
+            <a href="#!" onclick="$('#in_menubg').click();"><img class="actualimg" style="max-width:200px; max-height:200px !important; "></a>
+            <br><input type="file" style="display:none" id="in_menubg" name="imgbg">
           </div>
           <div class="divider"></div>
           <div class="section">
