@@ -21,6 +21,9 @@
   </body>
 </html>
 <?php
+  include 'verif_docen_sesion.php';
+  $id = $_SESSION['user_docente'];
+
   if (isset($_POST['color'])) {
     $color = $_POST['color'];
     echo '<script type="text/javascript">
@@ -30,9 +33,6 @@
       con.color_change("'.$color.'");
     </script>';
   }
-
-  session_start();
-  $id = $_SESSION['user_docente'];
 
   if(!($_FILES['imgbg']['size'] == 0)){
     $info = pathinfo($_FILES['imgbg']['name']);

@@ -1,18 +1,15 @@
 <?php
-header("Cache-Control: no-cache, must-revalidate");
-header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
-session_start();
-if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya estaba logeado*/
-	header("Location: logdocente.php"); /*Regresa al usuario logueado al menu*/
-}
-$docente = $_SESSION['user_docente'];
+	header("Cache-Control: no-cache, must-revalidate");
+	header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+	include 'verif_docen_sesion.php';
+	$docente = $_SESSION['user_docente'];
 
-include '../conexion.php'; //$conect
-mysqli_query($conect,"SET NAMES 'utf8'");
-$consulta = "SELECT CONCAT_WS(' ', `NOMBRE(S)`,`P_APELLIDO`) FROM `maestro` WHERE ID_MAESTRO = '{$_SESSION['user_docente']}'";
-$consulta = mysqli_query($conect, $consulta);
-$nombre = mysqli_fetch_array($consulta, MYSQLI_BOTH);
-mysqli_close($conect);
+	include '../conexion.php'; //$conect
+	mysqli_query($conect,"SET NAMES 'utf8'");
+	$consulta = "SELECT CONCAT_WS(' ', `NOMBRE(S)`,`P_APELLIDO`) FROM `maestro` WHERE ID_MAESTRO = '{$_SESSION['user_docente']}'";
+	$consulta = mysqli_query($conect, $consulta);
+	$nombre = mysqli_fetch_array($consulta, MYSQLI_BOTH);
+	mysqli_close($conect);
 ?>
 
 <!doctype html>

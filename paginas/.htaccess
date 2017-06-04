@@ -1,0 +1,9 @@
+RewriteEngine on
+RewriteRule "^Registro$"  "registro.php"
+RewriteRule "^Docente$"  "index_docente.php"
+RewriteRule "^Administrador$"  "index_admin.php"
+RewriteRule "^Tecnico$"  "index_tecnico.php"
+RewriteRule "^LoginDocente$"  "logdocente.php"
+RewriteRule "^LoginAdministrador$"  "logadmin.php"
+RewriteRule "^LoginTecnico$"  "logtecnico.php"
+ErrorDocument 404 "<H1>No se encuentra la pagina xd<br>esto se puede cambiar por una pagina con CSS chido :v</H1>"

@@ -1,8 +1,5 @@
 <?php
-session_start();
-if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya estaba logeado*/
-	header("Location: logdocente.php"); /*Regresa al usuario logueado al menu*/
-}
+	include 'verif_docen_sesion.php';
 ?>
 <!DOCTYPE html>
 <html>

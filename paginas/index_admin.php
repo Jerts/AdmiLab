@@ -1,8 +1,5 @@
 <?php
-session_start();
-if(!isset($_SESSION['user_admin'])){      /*Permite revisar si el usuario ya estaba logeado*/
-	header("Location: logadmin.php"); /*Regresa al usuario logueado al menu*/
-}
+	include 'verif_admin_sesion.php';
 ?>
 <!DOCTYPE html>
 <html>

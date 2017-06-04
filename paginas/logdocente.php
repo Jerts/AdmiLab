@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya estaba logeado*/
-	header("Location: index_docente.php"); /*Regresa al usuario logueado al menu*/
+	header("Location: Docente"); /*Regresa al usuario logueado al menu*/
 }
 ?>
 <!DOCTYPE html>
@@ -45,7 +45,7 @@ if(isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya es
 
 										</div>
 										<div class="card-action" align="center">
-												<a href="logadmin.php">Iniciar como Administrador</a>
+												<a href="LoginAdministrador">Iniciar como Administrador</a>
 												<a href="#">Registrarse</a>
 										</div>
 								</div>

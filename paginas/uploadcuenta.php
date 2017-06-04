@@ -21,7 +21,7 @@
   </body>
 </html>
 <?php
-  session_start();
+  include 'verif_docen_sesion.php';
   $id = $_SESSION['user_docente'];
 
   if(!($_FILES['imgperfil']['size'] == 0)){
