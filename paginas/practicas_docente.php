@@ -16,7 +16,7 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
   </head>
 
   <body>
-    <div style="width:90%; margin: 0 auto;">
+    <div style="width:99%; margin: 0 auto;">
       <div class="card">
 				<div class="card-content">
 				<span class='card-title'>Practica</span>

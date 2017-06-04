@@ -17,7 +17,7 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
     <link type="text/css" rel="stylesheet" href="assets/css/styles.css"  media="screen"/>
   </head>
   <body style="padding-bottom:200px">
-    <div class="card" style="width:90%;margin: 0 auto;">
+    <div class="card" style="width:99%;margin: 0 auto;">
       <?php
 			if(isset($_GET['upload']))
         if($_GET['upload']){
@@ -40,7 +40,7 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
           <div class="divider"></div>
           <div class="section">
             <font size="5">Fondo de menu</font><br>
-            <a href="#!" onclick="$('#in_menubg').click();"><img class="actualimg" style="max-width:200px; max-height:200px !important; "></a>
+            <a href="#!" onclick="$('#in_menubg').click();"><img class="actualimg hoverable" style="max-width:200px; max-height:200px !important; "></a>
             <br><input type="file" style="display:none" id="in_menubg" name="imgbg">
           </div>
           <div class="divider"></div>
