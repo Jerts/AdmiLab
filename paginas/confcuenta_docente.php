@@ -4,14 +4,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="viewport" content="width=device-width" />
-    <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen"/>
-    <link type="text/css" rel="stylesheet" href="assets/css/styles.css"  media="screen"/>
+    <?php include "header_materialize.html"; ?>
   </head>
   <body style="padding-bottom:200px">
     <div class="card" style="width:99%;margin: 0 auto;">

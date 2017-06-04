@@ -3,8 +3,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <?php include "header_materialize.html"; ?>
   </head>
   <body>
     <div class="preloader-wrapper small active" style="position:absolute; left:50%; top:50%;">
@@ -18,6 +17,7 @@
         </div>
       </div>
     </div>
+    <?php include "script_materialize.html"; ?>
   </body>
 </html>
 <?php
