@@ -16,7 +16,11 @@
 <html lang="es">
 	<head>
 		<title>Panel | AdmiLab</title>
-
+		<style media="screen">
+		::-webkit-scrollbar {
+		  display: none;
+		}
+		</style>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/png" href="">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -63,7 +67,7 @@
 							</ul>
 							<ul class="nav navbar-nav navbar-right">
 								<li>
-									<a href="#" class="dropdown-toggle notif-drop hidden-xs" data-toggle="dropdown">
+									<a href="#" style="margin-bottom:0px;" class="dropdown-toggle notif-drop hidden-xs" data-toggle="dropdown">
 										<i class="pe-7s-bell" style="font-size: 20px;"></i>
 									</a>
 									<ul class="dropdown-menu" style="width:300px !important; padding:0px; height: 300px !important;">
@@ -75,21 +79,10 @@
 					</div>
 				</nav>
 				<!-- CONTENIDO -->
-				<div class="content">
-					<div class="container-fluid">
+				<div class="content" style="padding:0px">
+					<div class="container-fluid" >
 						<div class="row">
-								<div class="preloader-wrapper small active" style="position:absolute; left:50%; top:50%;">
-							    <div class="spinner-layer spinner-blue-only">
-							      <div class="circle-clipper left">
-							        <div class="circle"></div>
-							      </div><div class="gap-patch">
-							        <div class="circle"></div>
-							      </div><div class="circle-clipper right">
-							        <div class="circle"></div>
-							      </div>
-							    </div>
-							  </div>
-							<iframe class="framei" scrolling="no" src="" width="100%" onload="framesize(this)" frameborder="0"></iframe>
+							<iframe class="framei" width="100%" frameborder="0" style="margin:0px;"></iframe>
 						</div>
 					</div>
 				</div>
@@ -149,6 +142,11 @@
 				}else{
 					$("#menulat").attr("data-color", bgcolor);
 				}
+				$(".framei").height($(window).height()-130);
+			});
+
+			$(window).resize(function(){
+				$(".framei").height($(window).height()-130);
 			});
 
 			function changecolor(color){

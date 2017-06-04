@@ -6,8 +6,8 @@
   <head>
     <?php include "header_materialize.html"; ?>
   </head>
-  <body style="padding-bottom:200px">
-    <div style="width:99%;margin: 0 auto;">
+  <body>
+    <div style="width:90%;margin: 26px auto;">
       <div class="card">
 				<div class="card-content">
 					<span class="card-title">
@@ -43,6 +43,7 @@
         }
         echo "</tbody>
 				</table>";
+
          ?>
 			 </p>
       </div>
@@ -52,5 +53,13 @@
 		</div>
     </div>
 		<?php include "script_materialize.html"; ?>
+		<script type="text/javascript" src="assets/js/toasts.js"></script>
+		<script>
+			<?php
+				if(isset($_GET["upload"])){
+					echo "Materialize.toast('La practica ha sido creada correctamente.', 3000, 'rounded');";
+				}
+			 ?>
+		</script>
   </body>
 </html>

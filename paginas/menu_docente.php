@@ -29,8 +29,8 @@
                </a>
              </li>
 
-             <li class="disabled">
-               <a>
+             <li>
+               <a href="#" onclick="menuselect(4);" class="waves-effect menubtn waves-light">
                  <i class="pe-7s-user" ></i>
                  <p>Usuario</p>
                </a>

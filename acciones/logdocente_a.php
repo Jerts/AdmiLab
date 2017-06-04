@@ -10,7 +10,7 @@ if (isset($user_docente) && isset($pass_docente)) {
   if(mysqli_num_rows($res)>0){
       session_start();
       $_SESSION['user_docente'] = $user_docente;
-      header("Location: ../paginas/index_docente.php");
+      header("Location: ../paginas/Docente");
       echo "Inicio de sesión exitoso";
   }else{
       echo "Error en el inicio de sesión <br>";

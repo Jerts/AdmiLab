@@ -12,9 +12,9 @@
              VALUES('{$id_maestro}','{$id_laboratorio}','{$id_materia}','{$dia}','{$hora_entrada}','{$hora_salida}')";
   echo $consulta;
   if (mysqli_query($conect,$consulta)) {
-    header("Location: ../paginas/horario_docente.php");
+    header("Location: ../paginas/horario_docente.php?upload=1");
   }
   else {
-    echo "No se realizó la inserción";
+    header("Location: ../paginas/crear_horario.php?upload=0");
   }
  ?>

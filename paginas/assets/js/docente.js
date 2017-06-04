@@ -13,10 +13,6 @@ $(".notif-drop").click(function() {
   $(".frame-notif").attr('src', $('.frame-notif').attr('src'));
 });
 
-function framesize(obj) {
-  obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-}
-
 function menuselect(select){
   switch (select) {
     case 1:
@@ -38,7 +34,7 @@ function menuselect(select){
       $(".top_icon").text("today");
       break;
     case 4:
-      $(".framei").attr("src","usuario.php");
+      $(".framei").attr("src","usuario_docente.php");
       $(".navbar-brand").text("Usuario");
       $("title").text("Usuario | AdmiLab");
       $(".top_icon").text("assignment_ind");

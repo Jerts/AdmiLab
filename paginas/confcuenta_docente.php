@@ -6,8 +6,8 @@
   <head>
     <?php include "header_materialize.html"; ?>
   </head>
-  <body style="padding-bottom:200px">
-    <div class="card" style="width:99%;margin: 0 auto;">
+  <body>
+    <div style="width:90%;margin: 26px auto;">
       <?php
 			if(isset($_GET['upload']))
         if($_GET['upload']){

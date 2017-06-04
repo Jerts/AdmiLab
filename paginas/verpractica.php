@@ -7,7 +7,7 @@
     <?php include "header_materialize.html"; ?>
   </head>
   <body>
-    <div style="width:99%; margin: 0 auto;">
+    <div style="width:90%;margin: 26px auto;">
       <div class="card">
 				<div class="card-content">
 	        <?php
