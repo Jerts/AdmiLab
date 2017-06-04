@@ -19,7 +19,7 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
       <div class="card">
 				<div class="card-content">
 					<span class="card-title">Añadir un horario</span>
-        <form class="" action="../acciones/crear_horario_a.php" method="post">
+        <form action="../acciones/crear_horario_a.php" method="post">
           Laboratorio:<br>
           <input list="labs" name="id_laboratorio" class="validate" required>
           <datalist id="labs">
@@ -65,7 +65,8 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
 
           Hora de salida formato 24 horas(hh:mm)<br>
           <input type="text" name="hora_salida" class="validate" pattern="^(?:(?:([01]?\d|2[0-3]):)?([0-5]?\d):)?([0-5]?\d)$" required><br>
-          <input type="submit" class="btn waves-effect waves-light" value="Enviar">
+					<input type="submit" style="display:none;" class="form1">
+          <a type="submit" class="btn waves-effect waves-light" onclick="$('.form1').click();">Enviar</a>
 
         </form>
       </div>

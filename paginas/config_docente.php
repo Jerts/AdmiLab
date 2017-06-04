@@ -66,7 +66,21 @@ if(!isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya e
     <script type="text/javascript" src="assets/js/materialize.min.js"></script>
     <script src="assets/js/config.class.js"></script>
     <script type="text/javascript">
+			function readURL(input) {
+		    if (input.files && input.files[0]) {
+			    var reader = new FileReader();
+
+			    reader.onload = function (e) {
+			        $('.actualimg').attr('src', e.target.result);
+			    }
+
+		        reader.readAsDataURL(input.files[0]);
+		    }
+			}
 			var conf = new config();
+			$('#in_menubg').change(function(){
+				readURL(this);
+			});
       $(document).ready(function() {
   			$('select').material_select();
   		});
