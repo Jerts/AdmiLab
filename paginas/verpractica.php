@@ -33,7 +33,7 @@
 	          $tecnico = mysqli_fetch_array($tecnico,MYSQLI_BOTH);
 
 	          $lista = mysqli_query($conect,$lista);
-						echo "<span class='card-title truncate'>".$practica."</span>".$docente[0].$tecnico[0];
+						echo "<span class='card-title truncate'>".$practica."</span>Docente: ".$docente[0]."<br>Técnico: ".$tecnico[0]."";
 	          echo "<table class='striped' border='1px'>
 	                  <thead>
 		                  <tr>

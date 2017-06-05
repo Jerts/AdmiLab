@@ -24,6 +24,7 @@
           </div>';
 				}
       ?>
+			<div class="card">
       <div class="card-content">
         <form action="uploadcuenta.php" class="formcuenta" method="post" enctype="multipart/form-data">
           <span class="card-title">Configuracion de la cuenta</span>
@@ -39,6 +40,7 @@
           <a onclick="$('.formcuenta').submit();" class="btn waves-effect waves-ligth blue" >Guardar</a>
         </form>
       </div>
+		</div>
     </div>
 		<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
     <script type="text/javascript" src="assets/js/materialize.min.js"></script>
