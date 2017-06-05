@@ -22,15 +22,19 @@
 	                      FROM material_practica
 	                      INNER JOIN tecnico ON material_practica.ID_TECNICO = tecnico.ID_TECNICO WHERE material_practica.ID_PRACTICA = '{$practica}'";
 
-	          $lista = "SELECT material.DESCRIPCION, material_practica.CANTIDAD_USADA, material_practica.UNIDAD
+	          $lista = "SELECT material.DESCRIPCION, material_practica.CANTIDAD_USADA, material_practica.UNIDAD, material_practica.ESTADO
 	                       FROM material_practica
 	                       INNER JOIN material ON material_practica.ID_MATERIAL = material.ID_MATERIAL WHERE material_practica.ID_PRACTICA = '{$practica}'";
 
 	          $docente = mysqli_query($conect,$docente);
 	          $docente = mysqli_fetch_array($docente,MYSQLI_BOTH);
 
-	          $tecnico = mysqli_query($conect,$tecnico);
-	          $tecnico = mysqli_fetch_array($tecnico,MYSQLI_BOTH);
+	          if($tecnico = mysqli_query($conect,$tecnico)){
+								$tecnico = mysqli_fetch_array($tecnico,MYSQLI_BOTH);
+						}
+						else {
+								$tecnico = "No asignado";
+						}
 
 	          $lista = mysqli_query($conect,$lista);
 						echo "<span class='card-title truncate'>".$practica."</span>Docente: ".$docente[0]."<br>Técnico: ".$tecnico[0]."";
@@ -40,6 +44,7 @@
 		                    <td>Material</td>
 		                    <td>Cantidad</td>
 		                    <td>Unidad</td>
+												<td>Estado</td>
 		                  </tr>
 										</thead>";
 	          while ($result = mysqli_fetch_array($lista, MYSQLI_BOTH)) {
@@ -47,6 +52,7 @@
 	                    <td>".$result[0]."</td>
 	                    <td>".$result[1]."</td>
 	                    <td>".$result[2]."</td>
+											<td>".$result[3]."</td>
 	                  </tr>";
 	          }
 	          echo "</table>";
