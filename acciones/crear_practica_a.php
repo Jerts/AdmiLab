@@ -10,15 +10,6 @@
   $tam = count($id_material);
   $cont=0;
   echo $tam;
-  /*$consulta="INSERT INTO `horario`(`ID_MAESTRO`,`ID_LABORATORIO`,`ID_MATERIA`,`DIA`,`HORA_ENTRADA`,`HORA_SALIDA`)
-             VALUES('{$id_maestro}','{$id_laboratorio}','{$id_materia}','{$dia}','{$hora_entrada}','{$hora_salida}')";
-  echo $consulta;
-  if (mysqli_query($conect,$consulta)) {
-    header("Location: ../paginas/horario_docente.php?upload=1");
-  }
-  else {
-    header("Location: ../paginas/crear_horario.php?upload=0");
-  }*/
   for ($i=0; $i <$tam ; $i++) {
     $consulta = "INSERT INTO `material_practica`(`ID_PRACTICA`,`ID_MATERIAL`,`ID_HORARIO`,`CANTIDAD_USADA`,`UNIDAD`,`ESTADO`)
                  VALUES('{$id_practica}','".$id_material[$i]."','{$id_horario}','".$cantidad_usada[$i]."','".$unidad[$i]."','PENDIENTE')";
