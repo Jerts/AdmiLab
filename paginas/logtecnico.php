@@ -1,7 +1,7 @@
 <?php
 session_start();
-if(isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya estaba logeado*/
-	header("Location: Docente"); /*Regresa al usuario logueado al menu*/
+if(isset($_SESSION['user_tecnico'])){      /*Permite revisar si el usuario ya estaba logeado*/
+	header("Location: Tecnico"); /*Regresa al usuario logueado al menu*/
 }
 ?>
 <!DOCTYPE html>
