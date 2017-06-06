@@ -22,6 +22,18 @@
     }
 }
 
+#body_tecnico {
+    background-image: url("../img/bg4.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+@media screen and (max-width: 1100px) {
+    #body_tecnico {
+        background-size: auto;
+    }
+}
+
 #card {
     width: 30%;
     min-width: 500px;
