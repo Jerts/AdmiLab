@@ -6,7 +6,6 @@ class config {
   }
 
   color_change(color){
-    this.sb_color = color;
     document.cookie = 'sb_color='+color;
   }
 
