@@ -47,7 +47,6 @@ if(isset($_SESSION['user_docente'])){      /*Permite revisar si el usuario ya es
 										<div class="card-action" align="center">
 												<a href="LoginAdministrador">Iniciar como Administrador</a> <br>
 												<a href="logtecnico.php">Inciar como Técnico</a>
-												<a href="#">Registrarse</a>
 										</div>
 								</div>
 						</div>

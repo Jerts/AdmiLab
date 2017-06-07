@@ -93,7 +93,7 @@
 			</div>
 		</div>
 		<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
-		<script src="assets/js/docente.js"></script>
+		<script src="assets/js/tecnico.js"></script>
 		<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 		<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>
 		<script src="assets/js/chartist.min.js"></script>
