@@ -22,6 +22,7 @@
 				<div class="card-content">
 					<span class="card-title">Crear nueva práctica de laboratorio</span>
 	        <form action="../acciones/crear_practica_a.php" method="post">
+						<h5>Práctica</h5>
             Nombre de la práctica:<br>
             <input type="text" name="id_practica" class="validate" required><br>
 
@@ -42,9 +43,10 @@
                echo "<option value='".$result[0]."'>Laboratorio: ".$result[1]." | Materia: ".$result[2]."</option>";
              }
              ?>
-           </select><br><br><br>
-
+           </select><br>
+					 <div class="divider"></div><br>
             <div id="materiales">
+								<h5>Material 1</h5>
                 Material<br>
                 <select id="sel" name="id_material[0]" class="validate" required>
                   <?php
@@ -56,7 +58,7 @@
                   ?>
                 </select><br>
                 Cantidad a usar:<br>
-                <input type="number" name="cantidad_usada[0]" class="validate" required>
+                <input type="number" name="cantidad_usada[0]" class="validate" min="1" required>
                 Unidad de medida:<br>
                 <select name="unidad[0]" class="validate" required>
                   <option value="PIEZA">Pieza</option>
@@ -67,11 +69,12 @@
             <div id="add"></div>
 
             <div>
-              <button type="button" name="button" onclick="add()"class="btn waves-effect waves-light">+</button><br><br>
+							<button type="button" name="button" onclick="add()" class="btn waves-effect waves-light">+</button>
+							<button type="button" name="button" class="btn remove-material waves-effect waves-light">-</button><br><br>
             </div>
 
 						<input type="submit" style="display:none;" class="form1">
-	          <a type="submit" class="btn waves-effect waves-light" onclick="$('.form1').click();">Enviar</a>
+	         	<a type="submit" class="btn waves-effect waves-light" onclick="$('.form1').click();">Enviar <span class="num-elem">(1)</span></a>
 	        </form>
       	</div>
 			</div>
@@ -82,16 +85,32 @@
       function() {
 			$('select').material_select();
 		  }
-
     );
+		$('.datepicker').pickadate({
+			 selectMonths: true,
+			 selectYears: 15
+		 });
+
+		 $(".remove-material").click(function(){
+			 $(".material-section")[$(".material-section").length-1].remove();
+			 $(".num-elem").text("("+($(".material-section").length+1)+")");
+		 });
+
     a=0;
     function add(){
       a++;
       var select = document.getElementById('sel').innerHTML;
       var div = document.createElement('div');
-      div.innerHTML = "Material<br><select  name='id_material["+a+"]' class='validate' required>"+select+"</select><br>Cantidad a usar:<br><input type='number' name='cantidad_usada["+a+"]' class='validate' required>Unidad de medida:<br><select name='unidad["+a+"]' class='validate' required><option value='PIEZA'>Pieza</option><option value='CAJA'>Caja</option></select><br><br>";
+			var num = $(".material-section").length+2;
+			$(".num-elem").text("("+($(".material-section").length+2)+")");
+			div.classList.add("material-section");
+			div.innerHTML = "<h5>Material "+num+"</h5>Material<br><select  name='id_material["+a+"]' class='validate' required>"+select+"</select><br>Cantidad a usar:<br><input type='number' name='cantidad_usada["+a+"]' class='validate' min='1' required>Unidad de medida:<br><select name='unidad["+a+"]' class='validate' required><option value='PIEZA'>Pieza</option><option value='CAJA'>Caja</option></select><br><br>";
       document.getElementById('add').appendChild(div);
       $('select').material_select();
+			$('.datepicker').pickadate({
+				 selectMonths: true,
+				 selectYears: 15
+			 });
     }
 		</script>
   </body>
