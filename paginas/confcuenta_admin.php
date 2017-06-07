@@ -31,7 +31,7 @@
           <div class="divider"></div>
           <div class="section">
             <font size="5">Imagen de perfil</font><br>
-            <a href="#!" onclick="$('#in_menuperfil').click();"><img class="actualimg hoverable tooltipped" style="max-width:200px; max-height:200px !important; " data-position="right" data-delay="50" data-tooltip="Cambiar foto de perfil."></a>
+            <a href="#!" onclick="$('#in_menuperfil').click();"><img class="actualimg hoverable" style="max-width:200px; max-height:200px !important; "></a>
             <br><input type="file" style="display:none" id="in_menuperfil" name="imgperfil">
           </div>
           <div class="divider"></div>
