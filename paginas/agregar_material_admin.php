@@ -36,7 +36,7 @@
               <option value="CAJA">Caja</option>
             </select><br>
             Fecha de entrega:<br>
-            <input type="date" name="fecha_entrega[0]" class="validate" required>
+            <input type="date" name="fecha_entrega[0]" class="validate datepicker" required>
             <div class="divider"></div><br><br>
 
             <div id="add"></div>
@@ -59,14 +59,23 @@
 		  }
 
     );
+		$('.datepicker').pickadate({
+			 selectMonths: true,
+			 selectYears: 15
+		 });
+
     a=0;
     function add(){
       a++;
       var select = document.getElementById('sel').innerHTML;
       var div = document.createElement('div');
-      div.innerHTML = "  Descripcion del material (Nombre):<br><input type='text' name='descripcion["+a+"]' class='validate' required><br>Marca:<br><input type='text' name='marca["+a+"]' class='validate' required><br>Provedor:<br><input type='text' name='provedor["+a+"]' class='validate' required><br>Cantidad:<br><input type='number' name='cantidad["+a+"]' class='validate' required><br>Unidad de medida:<br><select id='sel' name='unidad["+a+"]' class='validate' required>"+select+"</select><br>Fecha de entrega:<br><input type='date' name='fecha_entrega["+a+"]' class='validate' required><div class='divider'></div><br><br>";
+      div.innerHTML = "  Descripcion del material (Nombre):<br><input type='text' name='descripcion["+a+"]' class='validate' required><br>Marca:<br><input type='text' name='marca["+a+"]' class='validate' required><br>Provedor:<br><input type='text' name='provedor["+a+"]' class='validate' required><br>Cantidad:<br><input type='number' name='cantidad["+a+"]' class='validate' required><br>Unidad de medida:<br><select id='sel' name='unidad["+a+"]' class='validate' required>"+select+"</select><br>Fecha de entrega:<br><input type='date' name='fecha_entrega["+a+"]' class='validate datepicker' required><div class='divider'></div><br><br>";
       document.getElementById('add').appendChild(div);
       $('select').material_select();
+			$('.datepicker').pickadate({
+				 selectMonths: true,
+				 selectYears: 15
+			 });
     }
 		</script>
   </body>
