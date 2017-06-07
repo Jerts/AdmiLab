@@ -2,11 +2,13 @@
 	header("Cache-Control: no-cache, must-revalidate");
 	header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
 	include 'verif_admin_sesion.php';
-	$admin = $_SESSION['user_admin'];
+	$docente = $_SESSION['user_admin'];
 
 	include '../conexion.php'; //$conect
 	mysqli_query($conect,"SET NAMES 'utf8'");
-	$nombre = $_SESSION['user_admin'];
+	$consulta = "SELECT `USUARIO` FROM `administrador` WHERE USUARIO = '{$_SESSION['user_admin']}'";
+	$consulta = mysqli_query($conect, $consulta);
+	$nombre = mysqli_fetch_array($consulta, MYSQLI_BOTH);
 	mysqli_close($conect);
 ?>
 
@@ -80,7 +82,7 @@
 				<div class="content" style="padding:0px">
 					<div class="container-fluid" >
 						<div class="row">
-							<iframe class="framei" width="100%" frameborder="0" style="margin:0px;"></iframe>
+							<iframe class="framei" width="100%" frameborder="0" style="margin:0px; position:absolute;"></iframe>
 						</div>
 					</div>
 				</div>
@@ -91,7 +93,7 @@
 			</div>
 		</div>
 		<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
-		<script src="assets/js/docente.js"></script>
+		<script src="assets/js/admin.js"></script>
 		<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 		<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>
 		<script src="assets/js/chartist.min.js"></script>
@@ -100,26 +102,26 @@
 		<script src="assets/js/light-bootstrap-dashboard.js"></script>
 		<script type="text/javascript">
 			<?php
-				if (file_exists("assets/img/".$admin.".jpg")) {
-					echo '$("#menulat").attr("data-image", "'."assets/img/".$admin.".jpg".'");';
-				}else if (file_exists("assets/img/".$admin.".jpeg")) {
-					echo '$("#menulat").attr("data-image", "'."assets/img/".$admin.".jpeg".'");';
-				}else if (file_exists("assets/img/".$admin.".png")) {
-					echo '$("#menulat").attr("data-image", "'."assets/img/".$admin.".png".'");';
-				}else if (file_exists("assets/img/".$admin.".gif")) {
-					echo '$("#menulat").attr("data-image", "'."assets/img/".$admin.".gif".'");';
+				if (file_exists("assets/img/".$docente.".jpg")) {
+					echo '$("#menulat").attr("data-image", "'."assets/img/".$docente.".jpg".'");';
+				}else if (file_exists("assets/img/".$docente.".jpeg")) {
+					echo '$("#menulat").attr("data-image", "'."assets/img/".$docente.".jpeg".'");';
+				}else if (file_exists("assets/img/".$docente.".png")) {
+					echo '$("#menulat").attr("data-image", "'."assets/img/".$docente.".png".'");';
+				}else if (file_exists("assets/img/".$docente.".gif")) {
+					echo '$("#menulat").attr("data-image", "'."assets/img/".$docente.".gif".'");';
 				}
 			?>
 
 			<?php
-				if (file_exists("assets/img/faces/".$admin.".jpg")) {
-					echo '$("#img-perfil").css("background", "url(assets/img/faces/'.$admin.'.jpg");';
-				}else if (file_exists("assets/img/faces/".$admin.".jpeg")) {
-					echo '$("#img-perfil").css("background", "url(assets/img/faces/'.$admin.'.jpeg");';
-				}else if (file_exists("assets/img/faces/".$admin.".png")) {
-					echo '$("#img-perfil").css("background", "url(assets/img/faces/'.$admin.'.png");';
-				}else if (file_exists("assets/img/faces/".$admin.".gif")) {
-					echo '$("#img-perfil").css("background", "url(assets/img/faces/'.$admin.'.gif");';
+				if (file_exists("assets/img/faces/".$docente.".jpg")) {
+					echo '$("#img-perfil").css("background", "url(assets/img/faces/'.$docente.'.jpg");';
+				}else if (file_exists("assets/img/faces/".$docente.".jpeg")) {
+					echo '$("#img-perfil").css("background", "url(assets/img/faces/'.$docente.'.jpeg");';
+				}else if (file_exists("assets/img/faces/".$docente.".png")) {
+					echo '$("#img-perfil").css("background", "url(assets/img/faces/'.$docente.'.png");';
+				}else if (file_exists("assets/img/faces/".$docente.".gif")) {
+					echo '$("#img-perfil").css("background", "url(assets/img/faces/'.$docente.'.gif");';
 				}
 			?>
 			$("#img-perfil").css("background-size", "auto 35px");
@@ -135,16 +137,13 @@
 			$(document).ready(function(){
 				var conf = new config();
 				var bgcolor = conf.getCookie("sb_color");
-				if(!bgcolor){
-					document.cookie = 'sb_color=blue';
-				}else{
-					$("#menulat").attr("data-color", bgcolor);
-				}
-				$(".framei").height($(window).height()-130);
+				$("#menulat").attr("data-color", bgcolor);
+
+				$(".framei").height($(window).height()-123);
 			});
 
 			$(window).resize(function(){
-				$(".framei").height($(window).height()-130);
+				$(".framei").height($(window).height()-123);
 			});
 
 			function changecolor(color){

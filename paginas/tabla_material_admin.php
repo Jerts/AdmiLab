@@ -18,7 +18,7 @@
           mysqli_query($conect,"SET NAMES 'utf8'");
           $consulta = "SELECT ID_MATERIAL, DESCRIPCION, MARCA, PROVEDOR, CANTIDAD, UNIDAD, FECHA_ENTREGA FROM material";
           $consulta = mysqli_query($conect, $consulta);
-          echo "<table class='striped' border='1px'>
+          echo "<table class='striped responsive-table' border='1px'>
                   <thead>
                     <tr>
                       <td>Descripción</td>

@@ -82,7 +82,7 @@
 				<div class="content" style="padding:0px">
 					<div class="container-fluid" >
 						<div class="row">
-							<iframe class="framei" width="100%" frameborder="0" style="margin:0px;"></iframe>
+							<iframe class="framei" width="100%" frameborder="0" style="margin:0px; position:absolute;"></iframe>
 						</div>
 					</div>
 				</div>
@@ -137,16 +137,13 @@
 			$(document).ready(function(){
 				var conf = new config();
 				var bgcolor = conf.getCookie("sb_color");
-				if(!bgcolor){
-					document.cookie = 'sb_color=blue';
-				}else{
-					$("#menulat").attr("data-color", bgcolor);
-				}
-				$(".framei").height($(window).height()-130);
+				$("#menulat").attr("data-color", bgcolor);
+
+				$(".framei").height($(window).height()-123);
 			});
 
 			$(window).resize(function(){
-				$(".framei").height($(window).height()-130);
+				$(".framei").height($(window).height()-123);
 			});
 
 			function changecolor(color){
