@@ -13,6 +13,7 @@
 					<span class="card-title">
 						Horarios
 					</span>
+					<div class="divider"></div>
 					<p>
         <?php
         include '../conexion.php'; //$conect
@@ -21,7 +22,7 @@
         FROM horario
         INNER JOIN laboratorio ON horario.ID_LABORATORIO = laboratorio.ID_LABORATORIO WHERE horario.ID_MAESTRO = '{$_SESSION['user_docente']}'";
         $consulta = mysqli_query($conect, $consulta);
-        echo "<table border='1px' class='striped'>
+        echo "<table border='1px' class='striped responsive-table'>
 								<thead>
 	                <tr>
 	                  <td>Laboratorio</td>

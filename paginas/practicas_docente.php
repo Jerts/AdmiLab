@@ -18,9 +18,9 @@
           $consulta = "SELECT DISTINCT(ID_PRACTICA) FROM material_practica
                        INNER JOIN horario ON material_practica.ID_HORARIO = horario.ID_HORARIO WHERE horario.ID_MAESTRO = '".$_SESSION['user_docente']."'";
           $consulta = mysqli_query($conect, $consulta);
-          echo "<div class='collection with-header'>";
+          echo "<div class='collection'>";
           while ($result = mysqli_fetch_array($consulta, MYSQLI_BOTH)) {
-            echo "<a class='collection-item' href='verpractica.php?practica=".$result[0]."'>".$result[0]."</a>";
+            echo "<a class='collection-item black-text' href='verpractica.php?practica=".$result[0]."'>".$result[0]."</a>";
           }
           echo "</div>";
         ?>

@@ -19,7 +19,7 @@
   echo $tam;
   for ($i=0; $i <$tam ; $i++) {
     $consulta = "INSERT INTO `material`(`USUARIO_ADMIN`,`DESCRIPCION`,`MARCA`,`PROVEDOR`,`CANTIDAD`,`UNIDAD`,`FECHA_ENTREGA`,`FECHA_ACTUALIZACION`)
-                 VALUES('".$admin."','".$descripcion[$i]."','".$marca[$i]."','".$provedor[$i]."','".$cantidad[$i]."','".$unidad[$i]."','".$fecha_entrega[$i]."','".$fecha_actual."')";
+                 VALUES('".$admin."','".$descripcion[$i]."','".$marca[$i]."','".$provedor[$i]."','".$cantidad[$i]."','".$unidad[$i]."','".date("Y-n-j",strtotime($fecha_entrega[$i]))."','".$fecha_actual."')";
     if (mysqli_query($conect,$consulta)) {
       $cont++;
     }

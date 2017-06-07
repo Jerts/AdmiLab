@@ -38,7 +38,7 @@
 
 	          $lista = mysqli_query($conect,$lista);
 						echo "<span class='card-title truncate'>".$practica."</span>Docente: ".$docente[0]."<br>Técnico: ".$tecnico[0]."";
-	          echo "<table class='striped' border='1px'>
+	          echo "<table class='striped responsive-table' border='1px'>
 	                  <thead>
 		                  <tr>
 		                    <td>Material</td>
