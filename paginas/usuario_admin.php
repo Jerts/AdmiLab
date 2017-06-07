@@ -7,46 +7,59 @@
   <head>
     <?php include "header_materialize.html"; ?>
   </head>
-  <body style="padding-bottom:200px; background: url(assets/img/bg1.jpg); background-attachment: fixed !important; background-size: 100% auto; background-repeat: no-repeat;" >
-    <div style="width:90%; margin: 300px auto;">
+  <body>
+    <div style="width:90%; margin: 26px auto;">
       <div class="card">
+				<ul class="tabs tabs-fixed-width">
+					<li class="tab"><a href="#docente">Docente</a></li>
+					<li class="tab"><a href="#tecnico">Técnico</a></li>
+				</ul>
 				<div class="card-content">
-					<span class="card-title">Perfil</span>
-					Musha info :v <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      	</div>
+					<div id="docente" class="col s12">
+						<form action="../acciones/registro_docente_a.php" method="post">
+							<div class="input-field col s6">
+			          <input id="id" type="text" class="validate" max="50" required>
+			          <label for="id">Identificador</label>
+			        </div>
+							<div class="input-field col s6">
+			          <input id="pass" type="password" class="validate" min="6" max="40" required>
+			          <label for="pass">Contraseña</label>
+			        </div>
+							<div class="input-field col s6">
+			          <input id="pass2" type="password" class="validate" min="6" max="50" required>
+			          <label for="pass2">Confirme la contraseña</label>
+			        </div>
+							<div class="input-field col s6">
+			          <input id="name" type="text" class="validate" max="50" required>
+			          <label for="name">Nombre</label>
+			        </div>
+							<div class="input-field col s6">
+			          <input id="last" type="text" class="validate" max="50" required>
+			          <label for="last">Apellido Paterno</label>
+			        </div>
+							<div class="input-field col s6">
+			          <input id="last2" type="text" class="validate" max="50" required>
+			          <label for="last2">Apellido Materno</label>
+			        </div>
+							<div class="input-field col s12">
+			          <textarea id="textarea1" class="materialize-textarea"></textarea>
+			          <label for="textarea1">Observaciones/Extras (Opcional)</label>
+			        </div>
+							<input class="submit1" style="display:none" type="submit" name="submit">
+							<a href="#!" class="btn waves-effect waves-light" onclick="$('.submit1').click();">Enviar</a>
+						</form>
+					</div>
+					<div id="tecnico" class="col s12">
+						<form action="../acciones/registro_tecnico_a.php" method="post">
+
+						</form>
+					</div>
+				</div>
 			</div>
     </div>
-		<span class="span-perfil" style="position:absolute; top:230px;">
-			<span style="background: url('assets/img/faces/face-0.jpg'); width:130px !important; height: 130px !important; background-size: auto 130px; background-position: center;display:inline-block" class="circle white" id="img-perfil"></span>
-		</span>
 		<?php include "script_materialize.html"; ?>
-    <script type="text/javascript" src="assets/js/parallax.js"></script>
 		<script type="text/javascript">
-      <?php
-        if (file_exists("assets/img/faces/".$docente.".jpg")) {
-          echo '$("#img-perfil").css("background", "url(assets/img/faces/'.$docente.'.jpg");';
-        }else if (file_exists("assets/img/faces/".$docente.".jpeg")) {
-          echo '$("#img-perfil").css("background", "url(assets/img/faces/'.$docente.'.jpeg");';
-        }else if (file_exists("assets/img/faces/".$docente.".png")) {
-          echo '$("#img-perfil").css("background", "url(assets/img/faces/'.$docente.'.png");';
-        }else if (file_exists("assets/img/faces/".$docente.".gif")) {
-          echo '$("#img-perfil").css("background", "url(assets/img/faces/'.$docente.'.gif");';
-        }
-      ?>
-      $("#img-perfil").css("background-size", "auto 130px");
-      $("#img-perfil").css("background-position", "center");
-      $("#img-perfil").css("background-repeat", "no-repeat");
-
-      $(document).ready(function(){
-        var bodywidth = $("body").width();
-        $(".span-perfil").css("left", (bodywidth/2)-65 );
-      });
-
-			$(window).resize(function(){
-				var bodywidth = $("body").width();
-        $(".span-perfil").css("left", (bodywidth/2)-65 );
-			});
-
+			$('#tabs-swipe-demo').tabs({ 'swipeable': true });
 		</script>
   </body>
 </html>
