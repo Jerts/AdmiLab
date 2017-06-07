@@ -88,7 +88,7 @@
 				</div>
 
 				<!-- FOOTER -->
-				<?php include 'footer.php'; ?>
+
 
 			</div>
 		</div>
@@ -139,11 +139,11 @@
 				var bgcolor = conf.getCookie("sb_color");
 				$("#menulat").attr("data-color", bgcolor);
 
-				$(".framei").height($(window).height()-123);
+				$(".framei").height($(window).height()-63);
 			});
 
 			$(window).resize(function(){
-				$(".framei").height($(window).height()-123);
+				$(".framei").height($(window).height()-63);
 			});
 
 			function changecolor(color){

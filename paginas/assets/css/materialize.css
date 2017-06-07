@@ -4844,14 +4844,14 @@ small {
 }
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
-  color: #ffab40;
+  color: #00b0ff;
   margin-right: 24px;
   transition: color .3s ease;
   text-transform: uppercase;
 }
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating):hover {
-  color: #ffd8a6;
+  color: #0090dd;
 }
 
 .card .card-reveal {
@@ -5165,7 +5165,7 @@ small {
 .btn, .btn-large {
   text-decoration: none;
   color: #fff;
-  background-color: #26a69a;
+  background-color: #00c6cc;
   text-align: center;
   letter-spacing: .5px;
   transition: .2s ease-out;
@@ -5173,7 +5173,7 @@ small {
 }
 
 .btn:hover, .btn-large:hover {
-  background-color: #2bbbad;
+  background-color: #00a4aa;
 }
 
 .btn-floating {
@@ -6022,8 +6022,8 @@ input[type=tel]:focus:not([readonly]),
 input[type=number]:focus:not([readonly]),
 input[type=search]:focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #26a69a;
-  box-shadow: 0 1px 0 0 #26a69a;
+  border-bottom: 1px solid #00b0ff;
+  box-shadow: 0 1px 0 0 #00b0ff;
 }
 
 input:not([type]):focus:not([readonly]) + label,
