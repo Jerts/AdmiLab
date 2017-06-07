@@ -15,12 +15,12 @@ if(isset($_SESSION['user_admin'])){      /*Permite revisar si el usuario ya esta
 		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="stylesheet" href="assets/css/styles_login.css" media="screen">
-		<link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen"/>
+		<link type="text/css" rel="stylesheet" href="assets/css/materialize.css"  media="screen"/>
 
   </head>
   <body id="body_admin">
 
-		<div class="main" align="center">
+		<div class="main" align="center">	
 
 				<div align="center" id="card">
 
@@ -54,7 +54,7 @@ if(isset($_SESSION['user_admin'])){      /*Permite revisar si el usuario ya esta
 		</div>
 
 		<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
-		<script type="text/javascript" src="assets/js/materialize.min.js"></script>
+		<script type="text/javascript" src="assets/js/materialize.js"></script>
 		<script src="assets/js/light-bootstrap-dashboard.js"></script>
   </body>
 </html>

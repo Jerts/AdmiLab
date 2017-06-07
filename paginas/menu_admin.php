@@ -3,8 +3,8 @@
   <div class="sidebar-wrapper">
     <div class="logo">
       <a href="#Home" class="simple-text">
-                     AdmiLab
-                 </a>
+         AdmiLab
+     </a>
     </div>
 
     <ul class="nav">
@@ -15,6 +15,7 @@
         </a>
       </li>
 
+<<<<<<< HEAD
       <li style="display:none;">
         <a href="#" onclick="menuselect(2);" class="waves-effect menubtn waves-light">
           <i class="pe-7s-clock"></i>
@@ -29,6 +30,8 @@
         </a>
       </li>
 
+=======
+>>>>>>> origin/master
       <li>
         <a href="#" onclick="menuselect(4);" class="waves-effect menubtn waves-light">
           <i class="pe-7s-user"></i>
@@ -37,6 +40,7 @@
       </li>
 
       <li>
+<<<<<<< HEAD
         <a href="#" onclick="menuselect(1);" class="waves-effect menubtn waves-light">
           <i class="pe-7s-eyedropper"></i>
           <p>Materiales</p>
@@ -45,6 +49,9 @@
 
       <li>
          <a href="#" onclick="menuselect(6);" class="waves-effect menubtn waves-light">
+=======
+         <a onclick="menuselect(6);" class="waves-effect menubtn waves-light">
+>>>>>>> origin/master
              <i class="pe-7s-config"></i>
              <p>Configuración</p>
          </a>

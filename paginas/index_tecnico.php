@@ -142,11 +142,11 @@
 				}else{
 					$("#menulat").attr("data-color", bgcolor);
 				}
-				$(".framei").height($(window).height()-130);
+				$(".framei").height($(window).height()-63);
 			});
 
 			$(window).resize(function(){
-				$(".framei").height($(window).height()-130);
+				$(".framei").height($(window).height()-63);
 			});
 
 			function changecolor(color){

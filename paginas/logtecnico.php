@@ -14,7 +14,7 @@ if(isset($_SESSION['user_tecnico'])){      /*Permite revisar si el usuario ya es
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 		<meta name="viewport" content="width=device-width" />
-		<link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen"/>
+		<link type="text/css" rel="stylesheet" href="assets/css/materialize.css"  media="screen"/>
 
 
   </head>
@@ -56,6 +56,6 @@ if(isset($_SESSION['user_tecnico'])){      /*Permite revisar si el usuario ya es
 		<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 		<script src="assets/js/light-bootstrap-dashboard.js"></script>
-		<script type="text/javascript" src="assets/js/materialize.min.js"></script>
+		<script type="text/javascript" src="assets/js/materialize.js"></script>
   </body>
 </html>
