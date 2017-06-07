@@ -1,3 +1,4 @@
+ErrorDocument 404 "/404.html"
 RewriteEngine on
 RewriteRule "^Registro$"  "registro.php"
 RewriteRule "^Docente$"  "index_docente.php"
@@ -6,4 +7,3 @@ RewriteRule "^Tecnico$"  "index_tecnico.php"
 RewriteRule "^LoginDocente$"  "logdocente.php"
 RewriteRule "^LoginAdministrador$"  "logadmin.php"
 RewriteRule "^LoginTecnico$"  "logtecnico.php"
-ErrorDocument 404 "<H1>404 Not se found la pagina xd<br>esto se puede cambiar por una pagina con CSS chido :v</H1>"

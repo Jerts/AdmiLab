@@ -46,3 +46,16 @@
     right: 0;
     margin: auto;
 }
+
+#card1 {
+    width: 30%;
+    min-width: 600px;
+    max-height: 550px;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
