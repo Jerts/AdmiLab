@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-06-2017 a las 05:08:22
+-- Tiempo de generación: 07-06-2017 a las 20:07:48
 -- Versión del servidor: 10.1.21-MariaDB
 -- Versión de PHP: 7.1.1
 
@@ -224,21 +224,23 @@ CREATE TABLE `material` (
 --
 
 INSERT INTO `material` (`ID_MATERIAL`, `USUARIO_ADMIN`, `DESCRIPCION`, `MARCA`, `PROVEDOR`, `CANTIDAD`, `UNIDAD`, `FECHA_ENTREGA`, `FECHA_ACTUALIZACION`, `OBSERVACIONES`) VALUES
-('1', 'bestia666', 'ANAQUEL ABIERTO 5 NIVELES', 'DESCONOCIDO', 'DESCONOCIDO', '3', 'PIEZA', '2017-02-13', '2017-02-13', NULL),
-('10', 'patricio', 'CAPSULA DE PORCELANA 120ML', 'COORS', 'CTR SCIENTIFIC', '8', 'PIEZA', '2017-02-02', '2017-02-02', NULL),
-('11', 'akenfo', 'CINTA MASKING', 'DESCONOCIDO', 'DESCONOCIDO', '3', 'PIEZA', '2017-02-02', '2017-02-02', NULL),
-('12', 'patricio', 'CINTA METRICA DE COSTURERA', 'DESCONOCIDO', 'DESCONOCIDO', '5', 'PIEZA', '2017-02-02', '2017-02-02', NULL),
-('13', 'masterofpuppets', 'CRISOL PORCELANA 30ML', 'COORS', 'CTR SCIENTIFIC', '8', 'PIEZA', '2017-02-02', '2017-02-02', NULL),
-('14', 'profX', 'CUBRE OBJETOS 22X22MM', 'DESCONOCIDO', 'DESCONOCIDO', '5', 'CAJA', '2017-02-02', '2017-02-02', NULL),
-('15', 'pedroperales', 'CUBRE OBJETOS 24X50 AMM', 'CORNING', 'DESCONOCIDO', '5', 'CAJA', '2017-02-02', '2017-02-02', NULL),
-('2', 'akenfo', 'ASA BATERIOLOGICA SIN MANGO', 'DESCONOCIDO', 'DESCONOCIDO', '30', 'PIEZA', '2017-03-02', '2017-03-02', NULL),
-('3', 'profUtonio', 'ATOMIZADORES', 'DESCONOCIDO', 'DESCONOCIDO', '10', 'PIEZA', '2017-02-02', '2017-02-02', NULL),
-('4', 'fematQ', 'BALANZA GRANATARIA CON PLATILLO DE ACERO INOX', 'OHAUS', 'CTR SCIENTIFIC', '1', 'PIEZA', '2017-02-02', '2017-02-02', NULL),
-('5', 'profUtonio', 'BARRA MAGNETICA OCTA 9.5X25.4MM', 'BELART', 'CTR SCIENTIFIC', '6', 'PIEZA', '2017-02-02', '2017-02-02', NULL),
-('6', 'profJirafales', 'BOTELLA AMBAR 100 ML PYREX', 'DESCONOCIDO', 'DESCONOCIDO', '30', 'PIEZA', '2017-02-02', '2017-02-02', NULL),
-('7', 'LizzieMcguire', 'BULBO 3 VIAS ROJO ', 'HERTHROW', 'CTR SCIENTIFIC', '8', 'PIEZA', '2017-02-02', '2017-02-02', NULL),
-('8', 'steveJobs', 'BURETA ACCU-RED CLASE A LLAVE TEFLON 25ML', 'PYREX', 'CTR SCIENTIFIC', '6', 'PIEZA', '2017-02-02', '2017-02-02', NULL),
-('9', 'magic_lolita', 'CAJA PETRI (PYREX) 100 X 15', 'DESCONOCIDO', 'DESCONOCIDO', '2', 'CAJA', '2017-02-02', '2017-02-02', NULL);
+(1, 'bestia666', 'ANAQUEL ABIERTO 5 NIVELES', 'DESCONOCIDO', 'DESCONOCIDO', '1', 'PIEZA', '2017-02-13', '2017-06-07', NULL),
+(2, 'akenfo', 'ASA BATERIOLOGICA SIN MANGO', 'DESCONOCIDO', 'DESCONOCIDO', '30', 'PIEZA', '2017-03-02', '2017-06-07', NULL),
+(3, 'profUtonio', 'ATOMIZADORES', 'DESCONOCIDO', 'DESCONOCIDO', '10', 'PIEZA', '2017-02-02', '2017-02-02', NULL),
+(4, 'fematQ', 'BALANZA GRANATARIA CON PLATILLO DE ACERO INOX', 'OHAUS', 'CTR SCIENTIFIC', '1', 'PIEZA', '2017-02-02', '2017-02-02', NULL),
+(5, 'profUtonio', 'BARRA MAGNETICA OCTA 9.5X25.4MM', 'BELART', 'CTR SCIENTIFIC', '6', 'PIEZA', '2017-02-02', '2017-02-02', NULL),
+(6, 'profJirafales', 'BOTELLA AMBAR 100 ML PYREX', 'DESCONOCIDO', 'DESCONOCIDO', '30', 'PIEZA', '2017-02-02', '2017-02-02', NULL),
+(7, 'LizzieMcguire', 'BULBO 3 VIAS ROJO ', 'HERTHROW', 'CTR SCIENTIFIC', '8', 'PIEZA', '2017-02-02', '2017-02-02', NULL),
+(8, 'steveJobs', 'BURETA ACCU-RED CLASE A LLAVE TEFLON 25ML', 'PYREX', 'CTR SCIENTIFIC', '6', 'PIEZA', '2017-02-02', '2017-02-02', NULL),
+(9, 'magic_lolita', 'CAJA PETRI (PYREX) 100 X 15', 'DESCONOCIDO', 'DESCONOCIDO', '2', 'CAJA', '2017-02-02', '2017-02-02', NULL),
+(10, 'patricio', 'CAPSULA DE PORCELANA 120ML', 'COORS', 'CTR SCIENTIFIC', '8', 'PIEZA', '2017-02-02', '2017-02-02', NULL),
+(11, 'akenfo', 'CINTA MASKING', 'DESCONOCIDO', 'DESCONOCIDO', '1', 'PIEZA', '2017-02-02', '2017-06-07', NULL),
+(12, 'patricio', 'CINTA METRICA DE COSTURERA', 'DESCONOCIDO', 'DESCONOCIDO', '5', 'PIEZA', '2017-02-02', '2017-02-02', NULL),
+(13, 'masterofpuppets', 'CRISOL PORCELANA 30ML', 'COORS', 'CTR SCIENTIFIC', '8', 'PIEZA', '2017-02-02', '2017-02-02', NULL),
+(14, 'profX', 'CUBRE OBJETOS 22X22MM', 'DESCONOCIDO', 'DESCONOCIDO', '5', 'CAJA', '2017-02-02', '2017-02-02', NULL),
+(15, 'pedroperales', 'CUBRE OBJETOS 24X50 AMM', 'CORNING', 'DESCONOCIDO', '5', 'CAJA', '2017-02-02', '2017-02-02', NULL),
+(18, 'bestia666', 'Cosav++', 'Playstation', 'esta', '787878', 'PIEZA', '2017-05-23', '2017-06-06', NULL),
+(19, 'bestia666', 'Cosa13', 'asdasd', 'asddadsa', '57', 'PIEZA', '2017-06-05', '2017-06-06', NULL);
 
 -- --------------------------------------------------------
 
@@ -262,26 +264,25 @@ CREATE TABLE `material_practica` (
 --
 
 INSERT INTO `material_practica` (`ID_PRACTICA`, `ID_MATERIAL`, `ID_HORARIO`, `ID_TECNICO`, `CANTIDAD_USADA`, `UNIDAD`, `ESTADO`, `OBSERVACIONES`) VALUES
-('PRACTICA01_GENESIS_ANATOMIA', '1', 8, '4', '2', 'PIEZA', 'APROBADO', NULL),
-('PRACTICA01_GENESIS_ANATOMIA', '2', 8, '4', '2', 'PIEZA', 'APROBADO', NULL),
-('PRACTICA01_GENESIS_ANATOMIA', '3', 8, '4', '2', 'PIEZA', 'APROBADO', NULL),
-('PRACTICA01_GENESIS_ANATOMIA', '4', 8, '4', '2', 'PIEZA', 'APROBADO', NULL),
-('PRACTICA01_GENESIS_ANATOMIA', '5', 8, '4', '2', 'PIEZA', 'APROBADO', NULL),
-('PRACTICA01_GENESIS_ANATOMIA', '6', 8, '4', '2', 'PIEZA', 'APROBADO', NULL),
-('PRACTICA01_GENESIS_ANATOMIA', '7', 8, '4', '2', 'PIEZA', 'APROBADO', NULL),
-('PRACTICA01_GENESIS_ANATOMIA', '8', 8, '4', '2', 'PIEZA', 'APROBADO', NULL),
-('PRACTICA01_GENESIS_ANATOMIA', '9', 8, '4', '2', 'PIEZA', 'APROBADO', NULL),
-('PRACTICA01_GENESIS_ANATOMIA', '10', 8, '4', '2', 'PIEZA', 'APROBADO', NULL),
-('PRACTICA01_GENESIS_ANATOMIA', '11', 8, '4', '2', 'PIEZA', 'APROBADO', NULL),
-('PRACTICA01_GENESIS_ANATOMIA', '12', 8, '4', '2', 'PIEZA', 'APROBADO', NULL),
-('PRACTICA01_GENESIS_ANATOMIA', '13', 8, '4', '2', 'PIEZA', 'APROBADO', NULL),
-('PRACTICA01_GENESIS_ANATOMIA', '14', 8, '4', '2', 'PIEZA', 'APROBADO', NULL),
-('PRACTICA03_BIOLOGÍA', '2', 8, NULL, '2', 'PIEZA', 'PENDIENTE', NULL),
-('PRACTICA03_BIOLOGÍA', '11', 8, NULL, '1', 'PIEZA', 'PENDIENTE', NULL),
-('PRACTICA03_BIOLOGÍA', '3', 8, NULL, '3', 'PIEZA', 'PENDIENTE', NULL),
-('PRACTICA03_BIO', '1', 19, NULL, '2', 'PIEZA', 'PENDIENTE', NULL),
-('PRACTICA03_BIO', '11', 19, NULL, '2', 'PIEZA', 'PENDIENTE', NULL),
-('PRACTICA03_BIO', '1', 8, NULL, '1223', 'PIEZA', 'PENDIENTE', NULL);
+('PRACTICA01_GENESIS_ANATOMIA', 1, 8, 'CarlosFemat', '2', 'PIEZA', 'APROBADO', NULL),
+('PRACTICA01_GENESIS_ANATOMIA', 2, 8, 'CarlosFemat', '2', 'PIEZA', 'APROBADO', NULL),
+('PRACTICA01_GENESIS_ANATOMIA', 3, 8, 'CarlosFemat', '2', 'PIEZA', 'APROBADO', NULL),
+('PRACTICA01_GENESIS_ANATOMIA', 4, 8, 'CarlosFemat', '2', 'PIEZA', 'APROBADO', NULL),
+('PRACTICA01_GENESIS_ANATOMIA', 5, 8, 'CarlosFemat', '2', 'PIEZA', 'APROBADO', NULL),
+('PRACTICA01_GENESIS_ANATOMIA', 6, 8, 'CarlosFemat', '2', 'PIEZA', 'APROBADO', NULL),
+('PRACTICA01_GENESIS_ANATOMIA', 7, 8, 'CarlosFemat', '2', 'PIEZA', 'APROBADO', NULL),
+('PRACTICA01_GENESIS_ANATOMIA', 8, 8, 'CarlosFemat', '2', 'PIEZA', 'APROBADO', NULL),
+('PRACTICA01_GENESIS_ANATOMIA', 9, 8, 'CarlosFemat', '2', 'PIEZA', 'APROBADO', NULL),
+('PRACTICA01_GENESIS_ANATOMIA', 10, 8, 'CarlosFemat', '2', 'PIEZA', 'APROBADO', NULL),
+('PRACTICA01_GENESIS_ANATOMIA', 11, 8, 'CarlosFemat', '2', 'PIEZA', 'APROBADO', NULL),
+('PRACTICA01_GENESIS_ANATOMIA', 12, 8, 'CarlosFemat', '2', 'PIEZA', 'APROBADO', NULL),
+('PRACTICA01_GENESIS_ANATOMIA', 13, 8, 'CarlosFemat', '2', 'PIEZA', 'APROBADO', NULL),
+('PRACTICA01_GENESIS_ANATOMIA', 14, 8, 'CarlosFemat', '2', 'PIEZA', 'APROBADO', NULL),
+('PRACTICA03_BIOLOGÍA', 2, 8, NULL, '2', 'PIEZA', 'PENDIENTE', NULL),
+('PRACTICA03_BIOLOGÍA', 11, 8, NULL, '1', 'PIEZA', 'PENDIENTE', NULL),
+('PRACTICA03_BIOLOGÍA', 3, 8, NULL, '3', 'PIEZA', 'PENDIENTE', NULL),
+('PRACTICA03_BIO', 1, 19, 'CarlosFemat', '2', 'PIEZA', 'APROBADO', NULL),
+('PRACTICA03_BIO', 11, 19, 'CarlosFemat', '2', 'PIEZA', 'APROBADO', NULL);
 
 -- --------------------------------------------------------
 
@@ -291,7 +292,7 @@ INSERT INTO `material_practica` (`ID_PRACTICA`, `ID_MATERIAL`, `ID_HORARIO`, `ID
 
 CREATE TABLE `tecnico` (
   `ID_TECNICO` varchar(50) NOT NULL,
-  `CONTRASEÑA` varchar(40) NOT NULL,
+  `CONTRA` varchar(40) NOT NULL,
   `NOMBRE(S)` varchar(50) NOT NULL,
   `P_APELLIDO` varchar(50) NOT NULL,
   `S_APELLIDO` varchar(50) NOT NULL,
@@ -302,7 +303,7 @@ CREATE TABLE `tecnico` (
 -- Volcado de datos para la tabla `tecnico`
 --
 
-INSERT INTO `tecnico` (`ID_TECNICO`, `CONTRASEÑA`, `NOMBRE(S)`, `P_APELLIDO`, `S_APELLIDO`, `OBSERVACIONES`) VALUES
+INSERT INTO `tecnico` (`ID_TECNICO`, `CONTRA`, `NOMBRE(S)`, `P_APELLIDO`, `S_APELLIDO`, `OBSERVACIONES`) VALUES
 ('1', 'b60e56cf374338f1169639c5e921bf9e411a13c3', 'Ramiro', 'Estrada', 'Garcia', 'Guapo'),
 ('10', 'b60e56cf374338f1169639c5e921bf9e411a13c3', 'Jaime', 'Agricultor', 'Castañeda', ''),
 ('11', 'b60e56cf374338f1169639c5e921bf9e411a13c3', 'Kurt', 'Donald', 'Cobain', ''),
@@ -312,12 +313,12 @@ INSERT INTO `tecnico` (`ID_TECNICO`, `CONTRASEÑA`, `NOMBRE(S)`, `P_APELLIDO`, `
 ('15', 'b60e56cf374338f1169639c5e921bf9e411a13c3', 'Robert', 'Norton', 'Noice', 'De Intel Amigos'),
 ('2', 'b60e56cf374338f1169639c5e921bf9e411a13c3', 'Luis Mario', 'Trejo', 'Hinojosa', 'Guapo x2'),
 ('3', 'b60e56cf374338f1169639c5e921bf9e411a13c3', 'Daniel', 'Garnica', 'Sanchez', 'Guapo x3'),
-('4', 'b60e56cf374338f1169639c5e921bf9e411a13c3', 'Carlos Alan', 'Femat', 'Quintero', 'Profe malo :c'),
 ('5', 'b60e56cf374338f1169639c5e921bf9e411a13c3', 'Ludovico', 'P.', 'Luche', ''),
 ('6', 'b60e56cf374338f1169639c5e921bf9e411a13c3', 'Federica', 'Davalos', 'de P. Luche', ''),
 ('7', 'b60e56cf374338f1169639c5e921bf9e411a13c3', 'Junior', 'P. Luche', 'Davalos', ''),
 ('8', 'b60e56cf374338f1169639c5e921bf9e411a13c3', 'Bibiana', 'P. Luche', 'Davalos', ''),
-('9', 'b60e56cf374338f1169639c5e921bf9e411a13c3', 'Ludoviquito', 'P. Luche', 'Davalos', '');
+('9', 'b60e56cf374338f1169639c5e921bf9e411a13c3', 'Ludoviquito', 'P. Luche', 'Davalos', ''),
+('CarlosFemat', 'b60e56cf374338f1169639c5e921bf9e411a13c3', 'Carlos Alan', 'Femat', 'Quintero', 'Profe malo :c');
 
 --
 -- Índices para tablas volcadas
@@ -380,11 +381,7 @@ ALTER TABLE `tecnico`
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
---
--- AUTO_INCREMENT de la tabla `material`
---
-ALTER TABLE `material`
-  MODIFY `ID_MATERIAL` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
 --
 -- AUTO_INCREMENT de la tabla `horario`
 --
@@ -395,6 +392,11 @@ ALTER TABLE `horario`
 --
 ALTER TABLE `laboratorio`
   MODIFY `ID_LABORATORIO` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+--
+-- AUTO_INCREMENT de la tabla `material`
+--
+ALTER TABLE `material`
+  MODIFY `ID_MATERIAL` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- Restricciones para tablas volcadas
 --
