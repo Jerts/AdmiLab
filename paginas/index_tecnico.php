@@ -1,15 +1,14 @@
 <?php
 	header("Cache-Control: no-cache, must-revalidate");
 	header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
-	include 'verif_docen_sesion.php';
-	$docente = $_SESSION['user_docente'];
+	include 'verif_tecn_sesion.php';
+	$tecnico = $_SESSION['user_tecnico'];
 
 // Crear usuarios de Técnicos y cambiar esta parte xdxdxd
 	include '../conexion.php'; //$conect
 	mysqli_query($conect,"SET NAMES 'utf8'");
-	$consulta = "SELECT CONCAT_WS(' ', `NOMBRE(S)`,`P_APELLIDO`) FROM `maestro` WHERE ID_MAESTRO = '{$_SESSION['user_docente']}'";
-	$consulta = mysqli_query($conect, $consulta);
-	$nombre = mysqli_fetch_array($consulta, MYSQLI_BOTH);
+
+	$nombre = $tecnico;
 	mysqli_close($conect);
 ?>
 
@@ -103,26 +102,26 @@
 		<script src="assets/js/light-bootstrap-dashboard.js"></script>
 		<script type="text/javascript">
 			<?php
-				if (file_exists("assets/img/".$docente.".jpg")) {
-					echo '$("#menulat").attr("data-image", "'."assets/img/".$docente.".jpg".'");';
-				}else if (file_exists("assets/img/".$docente.".jpeg")) {
-					echo '$("#menulat").attr("data-image", "'."assets/img/".$docente.".jpeg".'");';
-				}else if (file_exists("assets/img/".$docente.".png")) {
-					echo '$("#menulat").attr("data-image", "'."assets/img/".$docente.".png".'");';
-				}else if (file_exists("assets/img/".$docente.".gif")) {
-					echo '$("#menulat").attr("data-image", "'."assets/img/".$docente.".gif".'");';
+				if (file_exists("assets/img/".$tecnico.".jpg")) {
+					echo '$("#menulat").attr("data-image", "'."assets/img/".$tecnico.".jpg".'");';
+				}else if (file_exists("assets/img/".$tecnico.".jpeg")) {
+					echo '$("#menulat").attr("data-image", "'."assets/img/".$tecnico.".jpeg".'");';
+				}else if (file_exists("assets/img/".$tecnico.".png")) {
+					echo '$("#menulat").attr("data-image", "'."assets/img/".$tecnico.".png".'");';
+				}else if (file_exists("assets/img/".$tecnico.".gif")) {
+					echo '$("#menulat").attr("data-image", "'."assets/img/".$tecnico.".gif".'");';
 				}
 			?>
 
 			<?php
-				if (file_exists("assets/img/faces/".$docente.".jpg")) {
-					echo '$("#img-perfil").css("background", "url(assets/img/faces/'.$docente.'.jpg");';
-				}else if (file_exists("assets/img/faces/".$docente.".jpeg")) {
-					echo '$("#img-perfil").css("background", "url(assets/img/faces/'.$docente.'.jpeg");';
-				}else if (file_exists("assets/img/faces/".$docente.".png")) {
-					echo '$("#img-perfil").css("background", "url(assets/img/faces/'.$docente.'.png");';
-				}else if (file_exists("assets/img/faces/".$docente.".gif")) {
-					echo '$("#img-perfil").css("background", "url(assets/img/faces/'.$docente.'.gif");';
+				if (file_exists("assets/img/faces/".$tecnico.".jpg")) {
+					echo '$("#img-perfil").css("background", "url(assets/img/faces/'.$tecnico.'.jpg");';
+				}else if (file_exists("assets/img/faces/".$tecnico.".jpeg")) {
+					echo '$("#img-perfil").css("background", "url(assets/img/faces/'.$tecnico.'.jpeg");';
+				}else if (file_exists("assets/img/faces/".$tecnico.".png")) {
+					echo '$("#img-perfil").css("background", "url(assets/img/faces/'.$tecnico.'.png");';
+				}else if (file_exists("assets/img/faces/".$tecnico.".gif")) {
+					echo '$("#img-perfil").css("background", "url(assets/img/faces/'.$tecnico.'.gif");';
 				}
 			?>
 			$("#img-perfil").css("background-size", "auto 35px");

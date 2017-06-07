@@ -1,5 +1,5 @@
 <?php
-	include 'verif_admin_sesion.php';
+	include 'verif_tecn_sesion.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,37 +16,28 @@
         <?php
           include '../conexion.php'; //$conect
           mysqli_query($conect,"SET NAMES 'utf8'");
-          $consulta = "SELECT ID_MATERIAL, DESCRIPCION, MARCA, PROVEDOR, CANTIDAD, UNIDAD, FECHA_ENTREGA FROM material";
+          $consulta = "SELECT DISTINCT(material_practica.`ID_PRACTICA`), horario.ID_MAESTRO
+                       FROM material_practica
+                       INNER JOIN horario ON material_practica.ID_HORARIO = horario.ID_HORARIO WHERE material_practica.ID_TECNICO IS NULL";
           $consulta = mysqli_query($conect, $consulta);
           echo "<table class='striped' border='1px'>
                   <thead>
                     <tr>
-                      <td>Descripción</td>
-                      <td>Marca</td>
-                      <td>Provedor</td>
-                      <td>Cantidad</td>
-                      <td>Unidad</td>
-                      <td>Fecha de entrega</td>
-                      <td>Modificar</td>
+                      <td>Practica</td>
+                      <td>Solicita</td>
+                      <td>Revisar material de práctica</td>
                     </tr>
                   </thead>";
           while ($result = mysqli_fetch_array($consulta, MYSQLI_BOTH)) {
             echo "<tr>
+                    <td>".$result[0]."</td>
                     <td>".$result[1]."</td>
-                    <td>".$result[2]."</td>
-                    <td>".$result[3]."</td>
-                    <td>".$result[4]."</td>
-                    <td>".$result[5]."</td>
-                    <td>".$result[6]."</td>
-                    <td><a href='modificar_material_admin.php?id=".$result[0]."'><i class='material-icons'>settings_ethernet</i></a></td>
+                    <td><a href='aceptar_material_tecnico.php?id=".$result[0]."'><i class='material-icons'>settings_ethernet</i></a></td>
                   </tr>";
           }
           echo "</table>";
         ?>
       </div>
-			<div class="card-action">
-			 <a href="agregar_material_admin.php">Añadir material</a>
-			</div>
 		</div>
     </div>
 		<?php include "script_materialize.html"; ?>
