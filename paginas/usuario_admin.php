@@ -22,7 +22,7 @@
 			          <label for="id">Identificador</label>
 			        </div>
 							<div class="input-field col s6">
-			          <input name="pass" id="pass" type="password" class="validate" min="6" max="40" required>
+			          <input name="contra" id="pass" type="password" class="validate" min="6" max="40" required>
 			          <label for="pass">Contraseña</label>
 			        </div>
 							<div class="input-field col s6">
