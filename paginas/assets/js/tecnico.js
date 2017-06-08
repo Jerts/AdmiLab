@@ -16,7 +16,7 @@ $(".notif-drop").click(function() {
 function menuselect(select){
   switch (select) {
     case 1:
-      $(".framei").attr("src","tabla_pracitcas_tecnico.php");
+      $(".framei").attr("src","tabla_practicas_tecnico.php");
       $(".navbar-brand").text("Panel");
       $("title").text("Panel | AdmiLab");
       $(".top_icon").text("insert_chart");
