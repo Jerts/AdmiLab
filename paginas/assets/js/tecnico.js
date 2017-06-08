@@ -1,5 +1,5 @@
 $(".preloader-wrapper").css("display","none");
-$(".framei").attr("src","horario_docente.php");
+$(".framei").attr("src","tabla_practicas_tecnico.php");
 
 $(".menubtn").click(function() {
   $(".preloader-wrapper").css("display","inherit");
@@ -33,5 +33,12 @@ function menuselect(select){
       $("title").text("Configuracion | AdmiLab");
       $(".top_icon").text("settings");
       break;
+
+      case 4:
+        $(".framei").attr("src","confcuenta_tecnico.php");
+        $(".navbar-brand").text("Configuracion de la cuenta");
+        $("title").text("Configuracion de la cuenta | AdmiLab");
+        $(".top_icon").text("settings");
+        break;
   }
 }

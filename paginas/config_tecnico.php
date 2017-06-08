@@ -25,12 +25,12 @@
 				}
       ?>
       <div class="card-content">
-        <form action="upload_admin.php" class="fileimg" method="post" enctype="multipart/form-data">
+        <form action="upload_tecnico.php" class="fileimg" method="post" enctype="multipart/form-data">
           <span class="card-title">Configuracion</span>
           <div class="divider"></div>
           <div class="section">
             <font size="5">Fondo de menu</font><br>
-            <a href="#!" onclick="$('#in_menubg').click();"><img class="actualimg hoverable" style="max-width:200px; max-height:200px !important; "></a>
+            <a href="#!" onclick="$('#in_menubg').click();"><img class="actualimg hoverable tooltipped" style="max-width:200px; max-height:200px !important; " data-position="right" data-delay="50" data-tooltip="Cambiar fondo del menú."></a>
             <br><input type="file" style="display:none" id="in_menubg" name="imgbg">
           </div>
           <div class="divider"></div>

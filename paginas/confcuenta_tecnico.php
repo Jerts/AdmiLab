@@ -1,5 +1,5 @@
 <?php
-	include 'verif_admin_sesion.php';
+	include 'verif_tecn_sesion.php';
 ?>
 <!DOCTYPE html>
 <html>

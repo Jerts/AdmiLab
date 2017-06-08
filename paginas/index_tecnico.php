@@ -60,7 +60,7 @@
 										<span style="background: url('assets/img/faces/face-0.jpg'); width:35px !important; height: 35px !important; background-size: auto 35px; background-position: center;display:inline-block" class="img-circle" id="img-perfil"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span style="vertical-align:50%;"><?php echo $nombre[0]; ?></span>
 									</a>
 									<ul class="dropdown-menu">
-										<li><a href="#" onclick="menuselect(5)" style="width: 200px !important;">Configuracion de la cuenta</a></li>
+										<li><a href="#" onclick="menuselect(4)" style="width: 200px !important;">Configuracion de la cuenta</a></li>
 										<li><a href="cerrarsesion.php" style="width: 200px !important;">Cerrar sesion</a></li>
 									</ul>
 								</li>
@@ -86,10 +86,6 @@
 						</div>
 					</div>
 				</div>
-
-				<!-- FOOTER -->
-				<?php include 'footer.php'; ?>
-
 			</div>
 		</div>
 		<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>

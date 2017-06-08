@@ -17,7 +17,7 @@
 			</div>
     </div>
 		<span class="span-perfil" style="position:absolute; top:230px;">
-			<span style="background: url('assets/img/faces/face-0.jpg'); width:130px !important; height: 130px !important; background-size: auto 130px; background-position: center;display:inline-block" class="circle white" id="img-perfil"></span>
+			<span style="background: url('assets/img/faces/face-0.jpg'); margin:auto !important; width:130px !important; height: 130px !important; background-size: auto 130px; background-position: center;display:inline-block" class="circle" id="img-perfil"></span>
 		</span>
 		<?php include "script_materialize.html"; ?>
     <script type="text/javascript" src="assets/js/parallax.js"></script>
