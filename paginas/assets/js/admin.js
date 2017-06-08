@@ -28,15 +28,15 @@ function menuselect(select){
       $(".top_icon").text("query_builder");
       break;
     case 3:
-      $(".framei").attr("src","practicas_docente.php");
-      $(".navbar-brand").text("Practicas");
-      $("title").text("Practicas | AdmiLab");
-      $(".top_icon").text("today");
+      $(".framei").attr("src","regis_docente.php");
+      $(".navbar-brand").text("Registro del Docente");
+      $("title").text("Registro del Docente | AdmiLab");
+      $(".top_icon").text("assignment_ind");
       break;
     case 4:
-      $(".framei").attr("src","usuario_admin.php");
-      $(".navbar-brand").text("Usuario");
-      $("title").text("Usuario | AdmiLab");
+      $(".framei").attr("src","regis_tecnico.php");
+      $(".navbar-brand").text("Registro del Técnico");
+      $("title").text("Registro del Técnico | AdmiLab");
       $(".top_icon").text("assignment_ind");
       break;
     case 5:
