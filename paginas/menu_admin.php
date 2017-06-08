@@ -15,11 +15,15 @@
         </a>
       </li>
 
-      <li>
-        <a onclick="menuselect(4);" class="waves-effect menubtn waves-light">
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown">
           <i class="pe-7s-user"></i>
-          <p>Usuario</p>
+          <p>Registrar usuarios</p>
         </a>
+        <ul class="dropdown-menu dropdown-menu-right">
+          <li><a href="#!" onclick="menuselect(3);" style="color:black">Registro del Docente</a></li>
+          <li><a href="#!" onclick="menuselect(4);" style="color:black">Registro del Técnico</a></li>
+        </ul>
       </li>
 
       <li>

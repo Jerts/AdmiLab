@@ -20,7 +20,7 @@ if(isset($_SESSION['user_admin'])){      /*Permite revisar si el usuario ya esta
   </head>
   <body id="body_admin">
 
-		<div class="main" align="center">	
+		<div class="main" align="center">
 
 				<div align="center" id="card">
 
@@ -47,14 +47,42 @@ if(isset($_SESSION['user_admin'])){      /*Permite revisar si el usuario ya esta
 										<div class="card-action" align="center">
 												<a href="LoginDocente">Iniciar como Docente</a> <br>
 												<a href="logtecnico.php">Iniciar como Técnico</a>
+												<a href="#modal1">Registrarse</a>
 										</div>
 								</div>
 						</div>
 				</div>
 		</div>
-
+		<div id="modal1" class="modal">
+	    <div class="modal-content center">
+				<h4>Suscribete para adquirir AdmiLab</h4>
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+					<input type="hidden" name="cmd" value="_xclick-subscriptions">
+					<input type="hidden" name="business" value="ramiroestradag@hotmail.com">
+					<input type="hidden" name="lc" value="MX">
+					<input type="hidden" name="item_name" value="AdmiLab">
+					<input type="hidden" name="no_note" value="1">
+					<input type="hidden" name="a1" value="0.00">
+					<input type="hidden" name="p1" value="1">
+					<input type="hidden" name="t1" value="M">
+					<input type="hidden" name="src" value="1">
+					<input type="hidden" name="a3" value="59.99">
+					<input type="hidden" name="p3" value="1">
+					<input type="hidden" name="t3" value="M">
+					<input type="hidden" name="currency_code" value="MXN">
+					<input type="hidden" name="bn" value="PP-SubscriptionsBF:btn_subscribeCC_LG.gif:NonHostedGuest">
+					<input type="image" src="https://www.paypalobjects.com/es_XC/MX/i/btn/btn_subscribeCC_LG.gif" border="0" width="200px" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
+					<img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+				</form>
+	    </div>
+	  </div>
 		<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
 		<script type="text/javascript" src="assets/js/materialize.js"></script>
 		<script src="assets/js/light-bootstrap-dashboard.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$('.modal').modal();
+		});
+		</script>
   </body>
 </html>

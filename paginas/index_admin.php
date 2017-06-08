@@ -70,7 +70,7 @@
 									<a href="#" style="margin-bottom:0px;" class="dropdown-toggle notif-drop hidden-xs" data-toggle="dropdown">
 										<i class="pe-7s-bell" style="font-size: 20px;"></i>
 									</a>
-									<ul class="dropdown-menu" style="width:300px !important; padding:0px; height: 300px !important;">
+									<ul class="dropdown-menu dropdown-menu-right" style="width:300px !important; padding:0px; height: 300px !important;">
 										<li><iframe src="notif.php" class="frame-notif" width="298px" height="298px" frameborder="0" style="margin: auto !important; border-radius: 10px;"></iframe></li>
 									</ul>
 								</li>
@@ -149,7 +149,9 @@
 			function changecolor(color){
 				$("#menulat").attr("data-color", color);
 			}
-
+			$(".dropdown-menu").mouseleave(function(){
+				$(this).parent().removeClass('open');
+			});
 		</script>
 	</body>
 </html>
