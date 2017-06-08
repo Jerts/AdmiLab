@@ -18,11 +18,11 @@
 					<div id="docente" class="col s12">
 						<form action="../acciones/registro_docente_a.php" method="post">
 							<div class="input-field col s6">
-			          <input id="id" type="text" class="validate" max="50" required>
+			          <input name="id_maestro" id="id" type="text" class="validate" max="50" required>
 			          <label for="id">Identificador</label>
 			        </div>
 							<div class="input-field col s6">
-			          <input id="pass" type="password" class="validate" min="6" max="40" required>
+			          <input name="pass" id="pass" type="password" class="validate" min="6" max="40" required>
 			          <label for="pass">Contraseña</label>
 			        </div>
 							<div class="input-field col s6">
@@ -30,19 +30,19 @@
 			          <label for="pass2">Confirme la contraseña</label>
 			        </div>
 							<div class="input-field col s6">
-			          <input id="name" type="text" class="validate" max="50" required>
+			          <input name="nombre" id="name" type="text" class="validate" max="50" required>
 			          <label for="name">Nombre</label>
 			        </div>
 							<div class="input-field col s6">
-			          <input id="last" type="text" class="validate" max="50" required>
+			          <input name="p_apellido" id="last" type="text" class="validate" max="50" required>
 			          <label for="last">Apellido Paterno</label>
 			        </div>
 							<div class="input-field col s6">
-			          <input id="last2" type="text" class="validate" max="50" required>
+			          <input name="s_apellido" id="last2" type="text" class="validate" max="50" required>
 			          <label for="last2">Apellido Materno</label>
 			        </div>
 							<div class="input-field col s12">
-			          <textarea id="textarea1" class="materialize-textarea"></textarea>
+			          <textarea name="observaciones" id="textarea1" class="materialize-textarea"></textarea>
 			          <label for="textarea1">Observaciones/Extras (Opcional)</label>
 			        </div>
 							<input class="submit1" style="display:none" type="submit" name="submit">

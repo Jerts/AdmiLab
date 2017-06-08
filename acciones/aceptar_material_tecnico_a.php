@@ -23,7 +23,7 @@ for ($i=0; $i <$tam ; $i++) {
     $num1 = mysqli_fetch_row($num1);
     $num2 = mysqli_fetch_row($num2);
     if ($num1[0]<$num2[0]) {
-      die("La cantidad solicitada es mayor a la existente en bodega")
+      die("La cantidad solicitada es mayor a la existente en bodega");
     }
     $material_resultado = $num1[0] - $num2[0];
     echo "".$num1[0]."<br>";
