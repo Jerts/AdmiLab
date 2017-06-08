@@ -1,7 +1,7 @@
 <?php
 include '../conexion.php'; //$conect
-$id_maestro = $_POST['id_maestro'];
-$contra = $_POST['contra'];
+$id_tecnico = $_POST['id_tecnico'];
+$contra = sha1($_POST['contra']);
 $nombre = $_POST['nombre'];
 $p_apellido = $_POST['p_apellido'];
 $s_apellido = $_POST['s_apellido'];
@@ -11,8 +11,8 @@ if($observaciones === ""){
   $observaciones = "Sin observaciones";
 }
 
-$insert = "INSERT INTO `maestro`(`ID_MAESTRO`,`CONTRA`,`NOMBRE(S)`,`P_APELLIDO`,`S_APELLIDO`,`OBSERVACIONES`)
-           VALUES ('{$id_maestro}','{$contra}','{$nombre}','{$p_apellido}','{$s_apellido}','{$observaciones}')";
+$insert = "INSERT INTO `tecnico`(`ID_TECNICO`,`CONTRA`,`NOMBRE(S)`,`P_APELLIDO`,`S_APELLIDO`,`OBSERVACIONES`)
+           VALUES ('{$id_tecnico}','{$contra}','{$nombre}','{$p_apellido}','{$s_apellido}','{$observaciones}')";
 
 if (mysqli_query($conect,$insert)) {
   echo "Registro exitoso";

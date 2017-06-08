@@ -15,11 +15,11 @@
 					<div class="col s12">
 						<form action="../acciones/registro_tecnico_a.php" method="post">
 							<div class="input-field col s6">
-			          <input id="id" type="text" class="validate" max="50" required>
+			          <input name="id_tecnico" id="id" type="text" class="validate" max="50" required>
 			          <label for="id"  data-error="Ya existe.">Identificador único</label>
 			        </div>
 							<div class="input-field col s6">
-			          <input id="pass" type="password" class="validate" min="6" max="40" required>
+			          <input name="contra" id="pass" type="password" class="validate" min="6" max="40" required>
 			          <label for="pass" data-error="No coinciden.">Contraseña</label>
 			        </div>
 							<div class="input-field col s6">
@@ -27,19 +27,19 @@
 			          <label for="pass2" data-error="No coinciden.">Confirme la contraseña</label>
 			        </div>
 							<div class="input-field col s6">
-			          <input id="name" type="text" class="validate" max="50" required>
+			          <input name="nombre" id="name" type="text" class="validate" max="50" required>
 			          <label for="name">Nombre</label>
 			        </div>
 							<div class="input-field col s6">
-			          <input id="last" type="text" class="validate" max="50" required>
+			          <input name="p_apellido" id="last" type="text" class="validate" max="50" required>
 			          <label for="last">Apellido Paterno</label>
 			        </div>
 							<div class="input-field col s6">
-			          <input id="last2" type="text" class="validate" max="50" required>
+			          <input name="s_apellido" id="last2" type="text" class="validate" max="50" required>
 			          <label for="last2">Apellido Materno</label>
 			        </div>
 							<div class="input-field col s12">
-			          <textarea id="textarea1" class="materialize-textarea validate"></textarea>
+			          <textarea name="observaciones" id="textarea1" class="materialize-textarea validate"></textarea>
 			          <label for="textarea1">Observaciones/Extras (Opcional)</label>
 			        </div>
 							<input class="submit1" style="display:none" type="submit" name="submit">
